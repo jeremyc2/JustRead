@@ -1,5 +1,5 @@
 :root {
-  background-color: black;
+  background-color: #EEEEEE;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -15,7 +15,7 @@ div {
   font-size: x-large;
   line-height: 2em;
   margin: 10px;
-  border: 2px solid black;
+  border: 1px solid #757575;
   padding: 8px;
   border-radius: 10px;
 }
