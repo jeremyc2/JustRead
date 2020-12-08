@@ -1,7 +1,8 @@
 body {
   font-family: sans-serif;
   overflow-x: hidden;
-  background-color: hsl(0 0% 80% / 1);
+  background-color: hsl(0deg 0% 90%);
   margin: 20;
   font-size: x-large;
+  line-height: 2em;
 }
