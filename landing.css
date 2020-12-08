@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+
+div, span, a {
+    padding: 25px;
+    text-align: center;
+
+    font-size: xx-large;
+}
+
+div {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+blockquote {
+    position: absolute;
+    font-size: large;
+    width: 400px;
+    padding: 5px;
+    border-radius: 5px;
+    right: 25px;
+    bottom: -96px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin: 0;
+    z-index: 1;
+}
+
+span {
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.colors:nth-child(3n+1) {
+    background-color: #e07a5f;
+}
+
+.colors:nth-child(3n+2) {
+    background-color: #3d405b;
+}
+
+.colors:nth-child(3n+0) {
+    background-color: #81b29a;
+}
+
+a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
