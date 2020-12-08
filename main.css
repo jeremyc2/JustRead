@@ -3,6 +3,10 @@
 }
 
 body {
+  margin: 0px;
+}
+
+div {
   font-family: sans-serif;
   overflow-x: hidden;
   background-color: hsl(0deg 0% 90%);
@@ -12,5 +16,4 @@ body {
   border: 2px solid black;
   padding: 8px;
   border-radius: 10px;
-  width: calc(100vw - 60px);
 }
