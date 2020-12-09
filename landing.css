@@ -22,33 +22,36 @@ blockquote {
 }
 
 span {
-    color: rgba(0, 0, 0, 0.2);
+    color: black;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 100px;
     display: inline-block;
     position: absolute;
+    padding: 10px;
 }
 
 span:nth-child(1) {
-    animation: 6s linear 0s infinite normal both running myOrbit;
+    animation: 12s linear 0s 1 normal both running myOrbit;
 }
 
 span:nth-child(2) {
-    animation: 6s linear -1s infinite normal both running myOrbit;
+    animation: 12s linear -2s 1 normal both running myOrbit;
 }
 
 span:nth-child(3) {
-    animation: 6s linear -2s infinite normal both running myOrbit;
+    animation: 12s linear -4s 1 normal both running myOrbit;
 }
 
 span:nth-child(4) {
-    animation: 6s linear -3s infinite normal both running myOrbit;
+    animation: 12s linear -6s 1 normal both running myOrbit;
 }
 
 span:nth-child(5) {
-    animation: 6s linear -4s infinite normal both running myOrbit;
+    animation: 12s linear -8s 1 normal both running myOrbit;
 }
 
 span:nth-child(6) {
-    animation: 6s linear -5s infinite normal both running myOrbit;
+    animation: 12s linear -10s 1 normal both running myOrbit;
 }
 
 .colors:nth-child(3n+1) {
@@ -63,6 +66,12 @@ span:nth-child(6) {
     background-color: #81b29a;
 }
 
+.orange {
+    background-image: URL(orange.svg);
+    background-repeat: no-repeat;
+    background-position: -200 200;
+}
+
 a {
     display: block;
     color: white;
@@ -70,6 +79,14 @@ a {
 }
 
 @keyframes myOrbit {
-    from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+    0% {
+        transform: rotate(0deg) translateX(250px) rotate(0deg); 
+    }
+    95% {
+        opacity: 0.9;
+    }
+    100% { 
+        transform: rotate(360deg) translateX(250px) rotate(-360deg); 
+        opacity: 0;
+    }
 }
