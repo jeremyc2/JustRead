@@ -1,7 +1,5 @@
 var controller = new ScrollMagic.Controller();
 
-console.log(controller);
-
 new ScrollMagic.Scene({
     triggerElement: "#cleaner",
     triggerHook: 0.9, // show, when scrolled 10% into view
