@@ -56,15 +56,15 @@ span {
 }
 
 .colors:nth-child(3n+1) {
-    background-color: #e07a5f;
+    background-color: hsl(13, 68%, 60%);
 }
 
 .colors:nth-child(3n+2) {
-    background-color: #3d405b;
+    background-color: hsl(234, 20%, 60%);
 }
 
 .colors:nth-child(3n+0) {
-    background-color: #81b29a;
+    background-color: hsl(151, 24%, 60%);
 }
 
 #orange {
