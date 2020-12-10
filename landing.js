@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     new ScrollMagic.Scene({
         triggerElement: "#cleaner",
-        triggerHook: 0.65, // show, when scrolled 10% into view
+        triggerHook: 0.65, // show, when scrolled 45% into view
     })
     .setClassToggle("#cleaner", "orbit")
     .addTo(controller);
