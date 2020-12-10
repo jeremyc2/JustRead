@@ -67,10 +67,37 @@ span {
     background-color: #81b29a;
 }
 
-.orange {
+#orange {
     background-image: URL(orange.svg);
     background-repeat: no-repeat;
     background-position: -200 200;
+}
+
+#revision {
+    background-image: URL(revision.svg);
+    background-repeat: repeat-x;
+    background-size: 300px;
+    background-position-y: center;
+}
+
+#studyQuestions {
+    background-image: URL(study1.svg);
+    background-repeat: no-repeat;
+    background-position: bottom -100px right 0px;
+}
+
+#search {
+    background-image: URL(magnifying-glass.svg);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: top 116% left -52px;
+}
+
+#lightbulb {
+    background-image: URL(lightbulb.svg);
+    background-repeat: no-repeat;
+    background-size: 350px;
+    background-position: center;
 }
 
 a {
@@ -80,7 +107,7 @@ a {
 }
 
 a:hover {
-    background-color: black !important;
+    background-color: hsl(13 68% 50% / 1) !important;
 }
 
 @keyframes myOrbit {
