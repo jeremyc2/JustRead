@@ -46,6 +46,8 @@ button {
   font-size: inherit;
   margin-right: 40;
   margin-left: 22px;
+
+  width: 53.59;
 }
 
 button:hover {
