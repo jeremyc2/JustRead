@@ -14,13 +14,12 @@ body {
   background-color: rgba(255, 255, 255, 1);
   border: none;
   border-radius: unset;
-  width: 100%;
   margin: unset;
   height: 70px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
 }
 
@@ -44,8 +43,6 @@ button {
   border: solid;
 
   font-size: inherit;
-  margin-right: 40;
-  margin-left: 22px;
 
   width: 53.59;
 }
