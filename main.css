@@ -40,7 +40,7 @@ button {
   padding: 10px;
   border-radius: 10px;
 
-  background: dodgerblue;
+  background: hsl(210, 100%, 56%);
   border: solid;
 
   font-size: inherit;
@@ -52,4 +52,17 @@ button {
 
 button:hover {
   background-color: hsl(210deg 100% 45%);
+}
+
+#scrollToTop {
+  background-color: hsl(39, 77%, 83%);
+  background-image: url(arrow-up.svg);
+  height: 53.59px;
+  background-size: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#scrollToTop:hover {
+  background-color: hsl(39, 77%, 72%);
 }
