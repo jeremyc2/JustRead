@@ -12,6 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
     .addTo(controller);
 
     new ScrollMagic.Scene({
+        triggerElement: "#studyQuestions", 
+        duration: 300,
+        triggerHook: 0.7
+    })
+    .setTween("#studyQuestions", {backgroundPosition: "bottom -100px right 0px"}) // the tween durtion can be omitted and defaults to 1
+    .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: "#search", 
+        duration: 300,
+        triggerHook: 0.5
+    })
+    .setTween("#search", {backgroundPosition: "-70 150"}) // the tween durtion can be omitted and defaults to 1
+    .addTo(controller);
+
+    new ScrollMagic.Scene({
         triggerElement: "#orange", 
         duration: 300,
         triggerHook: 0.5

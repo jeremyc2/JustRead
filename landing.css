@@ -90,14 +90,16 @@ span {
 #studyQuestions {
     background-image: URL(study1.svg);
     background-repeat: no-repeat;
-    background-position: bottom -100px right 0px;
+    
+    /* Animate to bottom -100px right 0px; */
+    background-position: bottom -100px right -100px;
 }
 
 #search {
     background-image: URL(magnifying-glass.svg);
     background-repeat: no-repeat;
     background-size: 400px;
-    background-position: top 116% left -52px;
+    background-position: -150 150;
 }
 
 #lightbulb {
