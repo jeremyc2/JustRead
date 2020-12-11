@@ -17,6 +17,11 @@ body {
   width: 100%;
   margin: unset;
   height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 div {
@@ -32,18 +37,15 @@ div {
 }
 
 button {
-  margin-left: calc(50%);
-  transform: translateX(-50%);
   padding: 10px;
   border-radius: 10px;
 
   background: dodgerblue;
   border: solid;
 
-  position: relative;
-  top: 8px;
-
   font-size: inherit;
+  margin-right: 40;
+  margin-left: 22px;
 }
 
 button:hover {
