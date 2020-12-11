@@ -8,6 +8,9 @@
         scrollButtonClicked = true;
         document.body.scrollTop = Math.floor(Math.random() * (document.body.scrollHeight + 1));
     }
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+    }
     /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
@@ -29,5 +32,5 @@ I, Nephi, having been born of goodly parents, therefore I was taught somewhat in
 </div>
 <div id="bottom">
     <button onclick="randomScroll()">&#x1F3B2;</button>
-    <button onclick="randomScroll()">&#x1F3B2;</button>
+    <button onclick="scrollToTop()">&#x1F3B2;</button>
 </div>
