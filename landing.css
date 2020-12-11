@@ -75,7 +75,9 @@ span {
 #orange {
     background-image: URL(orange.svg);
     background-repeat: no-repeat;
-    background-position: -200 200;
+
+    /* Animates to -200 200 */
+    background-position: -300 300;
 }
 
 #revision {
@@ -132,7 +134,7 @@ a:hover {
         transform: rotate(0deg) translateX(250px) rotate(0deg); 
         opacity: 1;
     }
-    95% {
+    80% {
         opacity: 1;
     }
     100% { 

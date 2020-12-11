@@ -11,4 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .setClassToggle("#cleaner", "orbit")
     .addTo(controller);
 
+    new ScrollMagic.Scene({
+        triggerElement: "#orange", 
+        duration: 300,
+        triggerHook: 0.5
+    })
+    .setTween("#orange", {backgroundPosition: "-200 200"}) // the tween durtion can be omitted and defaults to 1
+    .addTo(controller);
+
 });
