@@ -3,8 +3,25 @@
 <link rel="icon" href="simple.svg">
 <link rel="stylesheet" href="main.css">
 <script>
+    var scrollButtonClicked = false;
     function randomScroll() {
+        scrollButtonClicked = true;
         document.body.scrollTop = Math.floor(Math.random() * (document.body.scrollHeight + 1));
+    }
+    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var bottom = document.getElementById("bottom");
+        var currentScrollPos = window.pageYOffset;
+        if(!scrollButtonClicked && bottom != null) {
+            if (prevScrollpos > currentScrollPos) {
+                bottom.style.bottom = "0px";
+            } else {
+                bottom.style.bottom = "-90px";
+            }
+        }
+        prevScrollpos = currentScrollPos;
+        scrollButtonClicked = false;
     }
 </script>
 <div>

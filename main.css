@@ -11,13 +11,12 @@ body {
 #bottom {
   position: sticky;
   bottom: 0px;
-  box-shadow: inset 0 -113px 57px -97px #000000;
-  background: none;
+  background-color: rgba(255, 255, 255, 0.9);
   border: none;
   border-radius: unset;
   width: 100%;
   margin: unset;
-  height: 100px;
+  height: 70px;
 }
 
 div {
@@ -41,8 +40,8 @@ button {
   background: dodgerblue;
   border: solid;
 
-  position: absolute;
-  bottom: 15px;
+  position: relative;
+  top: 8px;
 
   font-size: inherit;
 }
