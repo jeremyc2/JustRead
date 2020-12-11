@@ -1,5 +1,9 @@
 body {
     margin: 0;
+
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    letter-spacing: -.009em;
 }
 
 div, span, a {
@@ -120,7 +124,7 @@ a {
 }
 
 a:hover {
-    background-color: hsl(13 68% 50% / 1) !important;
+    background-color:  hsl(13, 60%, 50%) !important;
 }
 
 @keyframes myOrbit {
