@@ -9,6 +9,7 @@
         document.body.scrollTop = Math.floor(Math.random() * (document.body.scrollHeight + 1));
     }
     function scrollToTop() {
+        scrollButtonClicked = true;
         document.body.scrollTop = 0;
     }
     /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
