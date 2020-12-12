@@ -35,4 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .setTween("#orange", {backgroundPosition: "-200 200"}) // the tween durtion can be omitted and defaults to 1
     .addTo(controller);
 
+    new ScrollMagic.Scene({
+        triggerElement: "#lightbulb", 
+        duration: 300,
+        triggerHook: 0.5
+    })
+    .setTween("#lightbulb", {backgroundSize: "450px"}) // the tween durtion can be omitted and defaults to 1
+    .addTo(controller);
+
 });
