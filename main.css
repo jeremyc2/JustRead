@@ -41,6 +41,7 @@ button {
   background-color: #202124;
   border-radius: 17px;
   border-color: transparent;
+  width: calc(50% - 40px);
 }
 
 button:hover {
