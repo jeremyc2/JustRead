@@ -36,30 +36,22 @@ div {
 }
 
 button {
-  padding: 10px;
-  border-radius: 10px;
-
-  background: hsl(210, 100%, 56%);
-  border: solid;
-
-  font-size: inherit;
-
-  width: 53.59;
+  height: 100%;
+  width: 200px;
 }
 
 button:hover {
-  background-color: hsl(210deg 100% 45%);
+
 }
 
 #scrollToTop {
-  background-color: hsl(39, 77%, 83%);
-  background-image: url(arrow-up.svg);
-  height: 53.59px;
-  background-size: 21px;
+  background-image: url(scroll-to-top.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#scrollToTop:hover {
-  background-color: hsl(39, 77%, 72%);
+#randomScroll {
+  background-image: url(random-scroll.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
