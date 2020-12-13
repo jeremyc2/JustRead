@@ -38,20 +38,25 @@ div {
 button {
   height: 100%;
   width: 200px;
+  background-color: #202124;
+  border-radius: 17px;
+  border-color: transparent;
 }
 
 button:hover {
-
+  background-color: #313b5a;
 }
 
 #scrollToTop {
   background-image: url(scroll-to-top.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 80px;
 }
 
 #randomScroll {
   background-image: url(random-scroll.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 90px;
 }
