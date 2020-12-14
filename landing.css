@@ -85,7 +85,7 @@ span {
     background-repeat: repeat-x;
     background-size: 300px;
     background-position-y: center;
-    background-position-x: 0px;
+    background-position-x: -150px;
 }
 
 #studyQuestions {

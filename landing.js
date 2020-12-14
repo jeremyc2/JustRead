@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 300,
         triggerHook: 0.5
     })
-    .setTween("#revision", {backgroundPositionX: "-150px"}) // the tween durtion can be omitted and defaults to 1
+    .setTween("#revision", {backgroundPositionX: "0px"}) // the tween durtion can be omitted and defaults to 1
     .addTo(controller);
 
     new ScrollMagic.Scene({
