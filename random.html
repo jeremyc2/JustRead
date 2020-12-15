@@ -1,0 +1,7 @@
+<script>
+fetch(`sentences/${Math.floor(Math.random() * 7625)}.txt`).then(response => {
+	response.text().then(text => {
+		document.body.innerHTML = text;
+	})
+})
+</script>
