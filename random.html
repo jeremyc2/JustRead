@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="simple.svg">
 <script>
+var i = 0;
 function getSentence(index) {
     return fetch(`sentences/${index}.txt`)
         .then(response => {
@@ -11,7 +12,22 @@ function getSentence(index) {
         });
 }
 function getRandomSentence() {
-    getSentence(Math.floor(Math.random() * 7625));
+    i = Math.floor(Math.random() * 7625);
+    getSentence(i);
+}
+function getFirstSentence() {
+    i = 0;
+    getSentence(i);
+}
+function getLastSentence() {
+    i = 7624;
+    getSentence(i);
+}
+function getPreviousSentence() {
+    getSentence(--i);
+}
+function getNextSentence() {
+    getSentence(++i);
 }
 getRandomSentence();
 </script>
