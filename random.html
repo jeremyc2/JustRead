@@ -2,7 +2,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="simple.svg">
 <script>
-var i = 0;
+var i;
+const urlParams = new URLSearchParams(window.location.search);
+
+if(urlParams.has("index")) {
+    i = urlParams.get("index");
+} else {
+    i = 0;
+}
+
 function getSentence(index) {
     return fetch(`sentences/${index}.txt`)
         .then(response => {
