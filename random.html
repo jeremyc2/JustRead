@@ -16,6 +16,7 @@ function getSentence(index) {
         .then(response => {
             response.text().then(text => {
                 document.body.innerHTML = text;
+                window.history.replaceState(null, null, `?index=${index}`);
             })
         });
 }
