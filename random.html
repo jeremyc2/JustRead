@@ -24,9 +24,15 @@ function getLastSentence() {
     getSentence(i);
 }
 function getPreviousSentence() {
+    if(i == 0) {
+        return;
+    }
     getSentence(--i);
 }
 function getNextSentence() {
+    if(i == 7624) {
+        return;
+    }
     getSentence(++i);
 }
 
