@@ -2,11 +2,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="simple.svg">
 <script>
-fetch(`sentences/${Math.floor(Math.random() * 7625)}.txt`).then(response => {
-	response.text().then(text => {
-		document.body.innerHTML = text;
-	})
-})
+function getSentence(index) {
+    return fetch(`sentences/${index}.txt`)
+        .then(response => {
+            response.text().then(text => {
+                document.body.innerHTML = text;
+            })
+        });
+}
+getSentence(Math.floor(Math.random() * 7625));
 </script>
 <style>
 body {
