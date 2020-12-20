@@ -29,6 +29,16 @@ function getPreviousSentence() {
 function getNextSentence() {
     getSentence(++i);
 }
+
+document.addEventListener("keydown", function(e) {
+    if(e.code == "ArrowLeft" || e.code == "ArrowUp") {
+        getPreviousSentence();
+    } else if(e.code == "ArrowRight" || e.code == "ArrowDown") {
+        getNextSentence();
+    } else if(e.code == "Space") {
+        getRandomSentence();
+    }
+});
 getRandomSentence();
 </script>
 <style>
