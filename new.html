@@ -34,11 +34,6 @@ window.addEventListener("load", function(event) {
         
     const dispatcher = new SwipeEventDispatcher(document.body);
 
-    dispatcher.on('SWIPE_UP', () => { 
-        console.log('I swiped up!');
-        getPreviousSentence(i, injectText);
-    });
-
     dispatcher.on('SWIPE_DOWN', () => {
         console.log('I swiped down!');
         getNextSentence(i, injectText);
