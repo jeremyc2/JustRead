@@ -5,6 +5,7 @@
 <script src="swipe.js"></script>
 <script>
 var i = 0;
+var isTouchEnabled = "ontouchstart" in document.documentElement;
 
 function injectText(index, text) {
     document.body.innerHTML = text;
@@ -23,27 +24,31 @@ document.addEventListener("keydown", function(e) {
     }
 });
 
-window.addEventListener("load", function(event) {
+if(isTouchEnabled) {
+    window.addEventListener("load", function(event) {
+            
+        const dispatcher = new SwipeEventDispatcher(document.body);
         
-    const dispatcher = new SwipeEventDispatcher(document.body);
-    
-    dispatcher.on('SWIPE_LEFT', () => {
-        getNextSentence(i, injectText);
-    });
+        dispatcher.on('SWIPE_LEFT', () => {
+            getNextSentence(i, injectText);
+        });
 
-    dispatcher.on('SWIPE_RIGHT', () => {
-        getPreviousSentence(i, injectText);
+        dispatcher.on('SWIPE_RIGHT', () => {
+            getPreviousSentence(i, injectText);
+        });
+        
     });
-    
-});
+}
 </script>
 <script type="module">
+if(isTouchEnabled) {
     import interact from 
     'https://cdn.interactjs.io/v1.10.1/interactjs/index.js';
     
     interact('body').on('doubletap', function (event) {
         getRandomSentence(injectText);
     });
+}
 </script>
 <style>
 body {
