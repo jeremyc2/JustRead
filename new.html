@@ -56,10 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     content = document.getElementById("content");
     appendContentButton = document.getElementById("append-content-button");
     appendContent();
+
+    document.addEventListener('load', appendContent, false);
+    document.addEventListener('scroll', appendContent, false);
+    document.addEventListener('resize', appendContent, false);
 }, false);
-document.addEventListener('load', appendContent, false);
-document.addEventListener('scroll', appendContent, false);
-document.addEventListener('resize', appendContent, false);
 
 </script>
 <script type="module">
