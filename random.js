@@ -1,5 +1,5 @@
 function getSentence(index, callback) {
-    return fetch(`sentences/${index}.txt`)
+    return fetch(`https://jeremyc2.github.io/JustRead/sentences/${index}.txt`)
         .then(response => {
             response.text().then(text => {
                 callback(index, text);
