@@ -44,13 +44,11 @@ function isElementInViewport (el) {
 }
 
 function appendContent() {
-    var interval = setInterval(() => {
-        if(!isElementInViewport(appendContentButton)) {
-            clearInterval(interval);
-        } else {
-            getNextSentence(i, appendText);
-        }
-    }, 200);
+    getNextSentence(i, appendText)
+        .then(getNextSentence(i, appendText))
+        .then(getNextSentence(i, appendText))
+        .then(getNextSentence(i, appendText))
+        .then(getNextSentence(i, appendText));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
