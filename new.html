@@ -6,7 +6,15 @@
 var i = 0;
 const urlParams = new URLSearchParams(window.location.search);
 
+var appendContentButton;
+
 function injectText(index, text) {
+    document.body.innerHTML = text;
+    i = index;
+    window.history.replaceState(null, null, `?index=${index}`);
+}
+
+function appendText(index, text) {
     document.body.innerHTML = text;
     i = index;
     window.history.replaceState(null, null, `?index=${index}`);
@@ -24,6 +32,32 @@ document.addEventListener("keydown", function(e) {
         getRandomSentence(injectText);
     }
 });
+
+function isElementInViewport (el) {
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function appendContent() {
+    while(isElementInViewport(appendContentButton)) {
+        getNextSentence(i, text => {document.body.innerHTML += text})
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    appendContentButton = document.getElementById("append-content-button");
+    appendContent();
+}, false);
+document.addEventListener('load', appendContent, false);
+document.addEventListener('scroll', appendContent, false);
+document.addEventListener('resize', appendContent, false);
 
 </script>
 <script type="module">
@@ -43,4 +77,11 @@ body {
     font-weight: 600;
     letter-spacing: -.009em;
 }
+#append-content-button {
+    position: absolute;
+    bottom: 5px;
+}
 </style>
+<body>
+    <button id="append-content-button"></button>
+</body>
