@@ -48,10 +48,12 @@ function isElementInViewport (el) {
 
 function appendContent() {
     if(isElementInViewport(appendContentButton)) {
-        if(promise == null)
+        if(promise == null) {
             promise = getNextSentence(i, appendText);
-        else
+        }
+        else {
             promise = promise.then(getNextSentence(i, appendText));
+        }
     }
 }
 
