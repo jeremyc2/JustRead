@@ -1,4 +1,4 @@
-<title>Just Random!</title>
+<title>Just Read 2.0!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="simple.svg">
 <script src="random.js"></script>
@@ -9,9 +9,15 @@ const urlParams = new URLSearchParams(window.location.search);
 function injectText(index, text) {
     document.body.innerHTML = text;
     i = index;
+    window.history.replaceState(null, null, `?index=${index}`);
 }
 
-getRandomSentence(injectText);
+if(urlParams.has("index")) {
+    i = urlParams.get("index");
+    getSentence(i, injectText);
+} else {
+    getRandomSentence(injectText);
+}
 
 document.addEventListener("keydown", function(e) {
     if(e.code == "ArrowLeft" || e.code == "ArrowUp") {
