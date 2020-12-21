@@ -6,16 +6,17 @@
 var i = 0;
 const urlParams = new URLSearchParams(window.location.search);
 
+var content;
 var appendContentButton;
 
 function injectText(index, text) {
-    document.body.innerHTML = text;
+    content.innerHTML = text;
     i = index;
     window.history.replaceState(null, null, `?index=${index}`);
 }
 
 function appendText(index, text) {
-    document.body.innerHTML = text;
+    content.innerHTML += text;
     i = index;
     window.history.replaceState(null, null, `?index=${index}`);
 }
@@ -47,11 +48,12 @@ function isElementInViewport (el) {
 
 function appendContent() {
     while(isElementInViewport(appendContentButton)) {
-        getNextSentence(i, text => {document.body.innerHTML += text})
+        getNextSentence(i, appendText);
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    content = document.getElementById("content");
     appendContentButton = document.getElementById("append-content-button");
     appendContent();
 }, false);
@@ -77,11 +79,8 @@ body {
     font-weight: 600;
     letter-spacing: -.009em;
 }
-#append-content-button {
-    position: absolute;
-    bottom: 5px;
-}
 </style>
 <body>
+    <div id="content"></div>
     <button id="append-content-button"></button>
 </body>
