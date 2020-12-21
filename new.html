@@ -14,6 +14,8 @@ var promise;
 function injectText(index, text) {
     if(content == null) return;
 
+    console.log(index);
+
     content.innerHTML = text;
     i = index;
     window.history.replaceState(null, null, `?index=${index}`);
@@ -21,6 +23,8 @@ function injectText(index, text) {
 
 function appendText(index, text) {
     if(content == null) return;
+
+    console.log(index);
 
     content.innerHTML += " " + text;
     window.history.replaceState(null, null, `?index=${index}`);
