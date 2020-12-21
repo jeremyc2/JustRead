@@ -9,6 +9,8 @@ const urlParams = new URLSearchParams(window.location.search);
 var content;
 var appendContentButton;
 
+var promise;
+
 function injectText(index, text) {
     if(content == null) return;
 
@@ -45,11 +47,10 @@ function isElementInViewport (el) {
 
 function appendContent() {
     if(isElementInViewport(appendContentButton)) {
-        getNextSentence(i, appendText)
-            .then(getNextSentence(i, appendText))
-            .then(getNextSentence(i, appendText))
-            .then(getNextSentence(i, appendText))
-            .then(getNextSentence(i, appendText));
+        if(promise == null)
+            promise = getNextSentence(i, appendText);
+        else
+            promise.then(getNextSentence(i, appendText));
     }
 }
 
