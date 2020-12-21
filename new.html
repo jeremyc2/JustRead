@@ -50,7 +50,7 @@ function appendContent() {
         if(promise == null)
             promise = getNextSentence(i, appendText);
         else
-            promise.then(getNextSentence(i, appendText));
+            promise = promise.then(getNextSentence(i, appendText));
     }
 }
 
