@@ -20,7 +20,7 @@ function injectText(index, text) {
 function appendText(index, text) {
     if(content == null) return;
 
-    content.innerHTML += text;
+    content.innerHTML += " " + text;
     i = index;
     window.history.replaceState(null, null, `?index=${index}`);
 }
