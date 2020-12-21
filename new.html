@@ -20,21 +20,11 @@ if(urlParams.has("index")) {
 }
 
 document.addEventListener("keydown", function(e) {
-    if(e.code == "ArrowLeft" || e.code == "ArrowUp") {
-        getPreviousSentence(i, injectText);
-    } else if(e.code == "ArrowRight" || e.code == "ArrowDown") {
-        getNextSentence(i, injectText);
-    } else if(e.code == "Space") {
+    if(e.code == "Space") {
         getRandomSentence(injectText);
     }
 });
 
-// document.addEventListener("wheel", function(e) {
-//     if(e.deltaY > 0)
-//         getNextSentence(i, injectText);
-//     else if(e.deltaY < 0)
-//         getPreviousSentence(i, injectText);
-// });
 </script>
 <style>
 body {
