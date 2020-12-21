@@ -26,6 +26,16 @@ document.addEventListener("keydown", function(e) {
 });
 
 </script>
+<script type="module">
+    import interact from 
+    'https://cdn.interactjs.io/v1.10.1/interactjs/index.js';
+        
+    if("ontouchstart" in document.documentElement) {
+        interact('body').on('doubletap', function (event) {
+            getRandomSentence(injectText);
+        });
+    }
+</script>
 <style>
 body {
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
