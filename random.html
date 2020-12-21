@@ -1,58 +1,30 @@
 <title>Just Random!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="simple.svg">
+<script src="random.js"></script>
 <script>
 var i = 0;
 const urlParams = new URLSearchParams(window.location.search);
 
-if(urlParams.has("index")) {
-    i = urlParams.get("index");
-    getSentence(i);
-} else {  
-    getRandomSentence();
+function injectText(index, text) {
+    document.body.innerHTML = text;
+    window.history.replaceState(null, null, `?index=${index}`);
 }
 
-function getSentence(index) {
-    return fetch(`sentences/${index}.txt`)
-        .then(response => {
-            response.text().then(text => {
-                document.body.innerHTML = text;
-                window.history.replaceState(null, null, `?index=${index}`);
-            })
-        });
-}
-function getRandomSentence() {
-    i = Math.floor(Math.random() * 7625);
-    getSentence(i);
-}
-function getFirstSentence() {
-    i = 0;
-    getSentence(i);
-}
-function getLastSentence() {
-    i = 7624;
-    getSentence(i);
-}
-function getPreviousSentence() {
-    if(i == 0) {
-        return;
-    }
-    getSentence(--i);
-}
-function getNextSentence() {
-    if(i == 7624) {
-        return;
-    }
-    getSentence(++i);
+if(urlParams.has("index")) {
+    i = urlParams.get("index");
+    getSentence(i, injectText);
+} else {
+    getRandomSentence(injectText);
 }
 
 document.addEventListener("keydown", function(e) {
     if(e.code == "ArrowLeft" || e.code == "ArrowUp") {
-        getPreviousSentence();
+        getPreviousSentence(i, injectText);
     } else if(e.code == "ArrowRight" || e.code == "ArrowDown") {
-        getNextSentence();
+        getNextSentence(i, injectText);
     } else if(e.code == "Space") {
-        getRandomSentence();
+        getRandomSentence(injectText);
     }
 });
 </script>
