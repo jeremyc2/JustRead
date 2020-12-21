@@ -51,10 +51,10 @@ function isElementInViewport (el) {
 function appendContent() {
     if(isElementInViewport(appendContentButton)) {
         if(promise == null) {
-            promise = getNextSentence(i++, appendText);
+            promise = getNextSentence(i++, appendText).then(() => console.log("Init promise"));
         }
         else {
-            promise = promise.then(getNextSentence(i++, appendText));
+            promise = promise.then(() => getNextSentence(i++, appendText));
         }
     }
 }
