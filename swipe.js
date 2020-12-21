@@ -12,7 +12,7 @@ class SwipeEventDispatcher {
         this.element = element;
         this.isMouseDown = false;
         this.listenForMouseEvents = true;
-        this.options = Object.assign({ triggerPercent: 0.3 }, options);
+        this.options = Object.assign({ triggerDist: 50 }, options);
 
         element.addEventListener('touchstart', evt => this.handleTouchStart(evt), false);
         element.addEventListener('touchend', evt => this.handleTouchEnd(evt), false);
@@ -49,9 +49,8 @@ class SwipeEventDispatcher {
         const deltaX = evt.clientX - this.xDown;
         const deltaY = evt.clientY - this.yDown;
         const distMoved = Math.abs(Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY);
-        const activePct = distMoved / this.element.offsetWidth;
 
-        if (activePct > this.options.triggerPercent) {
+        if (distMoved > this.options.triggerDist) {
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 deltaX < 0 ? this.trigger('SWIPE_LEFT') : this.trigger('SWIPE_RIGHT');
             } else {
@@ -64,9 +63,8 @@ class SwipeEventDispatcher {
         const deltaX = evt.changedTouches[0].clientX - this.xDown;
         const deltaY = evt.changedTouches[0].clientY - this.yDown;
         const distMoved = Math.abs(Math.abs(deltaX) > Math.abs(deltaY) ? deltaX : deltaY);
-        const activePct = distMoved / this.element.offsetWidth;
 
-        if (activePct > this.options.triggerPercent) {
+        if (distMoved > this.options.triggerDist) {
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 deltaX < 0 ? this.trigger('SWIPE_LEFT') : this.trigger('SWIPE_RIGHT');
             } else {
