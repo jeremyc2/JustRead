@@ -24,6 +24,7 @@ function appendText(index, text) {
 
     content.innerHTML += " " + text;
     i = index;
+    console.log(i);
     window.history.replaceState(null, null, `?index=${index}`);
 }
 
