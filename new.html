@@ -50,7 +50,7 @@ function appendContent() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     if(urlParams.has("index")) {
         i = urlParams.get("index");
         getSentence(i, injectText);
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 </script>
 <style>
-body {
+#content {
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: xx-large;
     font-weight: 600;
