@@ -10,22 +10,19 @@ var content;
 var appendContentButton;
 
 function injectText(index, text) {
+    if(content == null) return;
+
     content.innerHTML = text;
     i = index;
     window.history.replaceState(null, null, `?index=${index}`);
 }
 
 function appendText(index, text) {
+    if(content == null) return;
+
     content.innerHTML += text;
     i = index;
     window.history.replaceState(null, null, `?index=${index}`);
-}
-
-if(urlParams.has("index")) {
-    i = urlParams.get("index");
-    getSentence(i, injectText);
-} else {
-    getFirstSentence(injectText);
 }
 
 document.addEventListener("keydown", function(e) {
@@ -53,6 +50,14 @@ function appendContent() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    
+    if(urlParams.has("index")) {
+        i = urlParams.get("index");
+        getSentence(i, injectText);
+    } else {
+        getFirstSentence(injectText);
+    }
+
     content = document.getElementById("content");
     appendContentButton = document.getElementById("append-content-button");
     // appendContent();
