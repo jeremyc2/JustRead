@@ -28,6 +28,13 @@ document.addEventListener("keydown", function(e) {
         getRandomSentence(injectText);
     }
 });
+
+document.addEventListener("wheel", function(e) {
+    if(e.deltaY > 0)
+        getNextSentence(i, injectText);
+    else if(e.deltaY < 0)
+        getPreviousSentence(i, injectText);
+});
 </script>
 <style>
 body {
