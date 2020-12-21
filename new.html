@@ -16,7 +16,7 @@ if(urlParams.has("index")) {
     i = urlParams.get("index");
     getSentence(i, injectText);
 } else {
-    getRandomSentence(injectText);
+    getFirstSentence(injectText);
 }
 
 document.addEventListener("keydown", function(e) {
