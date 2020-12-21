@@ -44,9 +44,13 @@ function isElementInViewport (el) {
 }
 
 function appendContent() {
-    if(isElementInViewport(appendContentButton)) {
-        getNextSentence(i, appendText);
-    }
+    var interval = setInterval(() => {
+        if(isElementInViewport(appendContentButton)) {
+            clearInterval(interval);
+        } else {
+            getNextSentence(i, appendText);
+        }
+    }, 200);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
