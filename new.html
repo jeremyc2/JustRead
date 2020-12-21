@@ -44,15 +44,13 @@ function isElementInViewport (el) {
 }
 
 function appendContent() {
-    getNextSentence(i, () => {
-            if(isElementInViewport(appendContentButton)) {
-                getNextSentence(i, appendText);
-            }
-        })
-        .then(getNextSentence(i, appendText))
-        .then(getNextSentence(i, appendText))
-        .then(getNextSentence(i, appendText))
-        .then(getNextSentence(i, appendText));
+    if(isElementInViewport(appendContentButton)) {
+        getNextSentence(i, appendText)
+            .then(getNextSentence(i, appendText))
+            .then(getNextSentence(i, appendText))
+            .then(getNextSentence(i, appendText))
+            .then(getNextSentence(i, appendText));
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
