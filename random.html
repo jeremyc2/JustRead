@@ -8,6 +8,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
 function injectText(index, text) {
     document.body.innerHTML = text;
+    i = index;
     window.history.replaceState(null, null, `?index=${index}`);
 }
 
