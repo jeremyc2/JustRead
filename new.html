@@ -44,7 +44,11 @@ function isElementInViewport (el) {
 }
 
 function appendContent() {
-    getNextSentence(i, appendText)
+    getNextSentence(i, () => {
+            if(isElementInViewport(appendContentButton)) {
+                getNextSentence(i, appendText);
+            }
+        })
         .then(getNextSentence(i, appendText))
         .then(getNextSentence(i, appendText))
         .then(getNextSentence(i, appendText))
