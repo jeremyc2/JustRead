@@ -45,7 +45,7 @@ function isElementInViewport (el) {
 
 function appendContent() {
     var interval = setInterval(() => {
-        if(isElementInViewport(appendContentButton)) {
+        if(!isElementInViewport(appendContentButton)) {
             clearInterval(interval);
         } else {
             getNextSentence(i, appendText);
