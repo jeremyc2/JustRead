@@ -49,6 +49,11 @@ function isElementInViewport (el) {
 }
 
 function appendContent() {
+    if(i >= 7624) {
+        document.body.removeChild(appendContentButton);
+        return;
+    }
+
     if(isElementInViewport(appendContentButton)) {
         promise = promise
             .then(() => getNextSentence(i, appendText))
