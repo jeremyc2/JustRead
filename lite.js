@@ -36,12 +36,6 @@ function appendText(index, text) {
     content.appendChild(span);
 }
 
-document.addEventListener("keydown", function(e) {
-    if(e.code == "Space") {
-        promise = getRandomSentence(injectText);
-    }
-});
-
 function isElementInViewport (el) {
 
     var rect = el.getBoundingClientRect();

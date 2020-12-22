@@ -4,16 +4,6 @@
 <link rel="stylesheet" href="lite.css">
 <script src="random.js"></script>
 <script src="lite.js"></script>
-<script type="module">
-    import interact from 
-    'https://cdn.interactjs.io/v1.10.1/interactjs/index.js';
-        
-    if("ontouchstart" in document.documentElement) {
-        interact('body').on('doubletap', function (event) {
-            promise = getRandomSentence(injectText);
-        });
-    }
-</script>
 <body>
     <div id="content"></div>
     <button id="append-content-button" onclick="appendContent()">LOAD MORE</button>
