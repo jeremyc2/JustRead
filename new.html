@@ -62,7 +62,8 @@ function isElementInViewport (el) {
 function appendContent() {
     if(isElementInViewport(appendContentButton)) {
         promise = promise
-            .then(() => getNextSentence(i++, appendText))
+            .then(() => getNextSentence(i, appendText))
+            .then(() => i++)
             .then(() => {
                 if(isElementInViewport(appendContentButton)) {
                     appendContent();
