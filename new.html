@@ -18,7 +18,7 @@ function injectText(index, text) {
 
     content.innerHTML = text;
     i = index;
-    window.history.replaceState(null, null, `?index=${index}`);
+    // window.history.replaceState(null, null, `?index=${index}`);
 }
 
 function appendText(index, text) {
@@ -27,7 +27,7 @@ function appendText(index, text) {
     console.log(`ATI: ${index}`);
 
     content.innerHTML += " " + text;
-    window.history.replaceState(null, null, `?index=${index}`);
+    // window.history.replaceState(null, null, `?index=${index}`);
 }
 
 document.addEventListener("keydown", function(e) {
