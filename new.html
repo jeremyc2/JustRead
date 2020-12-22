@@ -43,7 +43,7 @@ function appendText(index, text) {
 
 document.addEventListener("keydown", function(e) {
     if(e.code == "Space") {
-        getRandomSentence(injectText);
+        promise = getRandomSentence(injectText);
     }
 });
 
@@ -61,24 +61,13 @@ function isElementInViewport (el) {
 
 function appendContent() {
     if(isElementInViewport(appendContentButton)) {
-        if(promise == null) {
-            promise = getNextSentence(i, appendText)
-                .then(() => i++)
-                .then(() => {
-                    if(isElementInViewport(appendContentButton)) {
-                        appendContent();
-                    }
-                });
-        }
-        else {
-            promise = promise
-                .then(() => getNextSentence(i++, appendText))
-                .then(() => {
-                    if(isElementInViewport(appendContentButton)) {
-                        appendContent();
-                    }
-                });
-        }
+        promise = promise
+            .then(() => getNextSentence(i++, appendText))
+            .then(() => {
+                if(isElementInViewport(appendContentButton)) {
+                    appendContent();
+                }
+            });
     }
 }
 
@@ -86,9 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(urlParams.has("index")) {
         i = urlParams.get("index");
-        getSentence(i, injectText);
+        promise = getSentence(i, injectText);
     } else {
-        getFirstSentence(injectText);
+        promise = getFirstSentence(injectText);
     }
 
     content = document.getElementById("content");
@@ -107,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
     if("ontouchstart" in document.documentElement) {
         interact('body').on('doubletap', function (event) {
-            getRandomSentence(injectText);
+            promise = getRandomSentence(injectText);
         });
     }
 </script>
