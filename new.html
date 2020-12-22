@@ -11,14 +11,22 @@ var appendContentButton;
 
 var promise;
 
+function buildBookmarkURL(index) {
+    return document.location.origin + document.location.pathname + `?index=${index}`
+    // window.history.replaceState(null, null, `?index=${index}`);
+}
+
 function injectText(index, text) {
     if(content == null) return;
 
     console.log(`ITI: ${index}`);
 
-    content.innerHTML = text;
+    var span = document.createElement("span");
+    span.id = index;
+
+    span.innerHTML = text;
+    content.appendChild(span);
     i = index;
-    // window.history.replaceState(null, null, `?index=${index}`);
 }
 
 function appendText(index, text) {
@@ -26,8 +34,11 @@ function appendText(index, text) {
 
     console.log(`ATI: ${index}`);
 
-    content.innerHTML += " " + text;
-    // window.history.replaceState(null, null, `?index=${index}`);
+    var span = document.createElement("span");
+    span.id = index;
+
+    span.innerHTML += " " + text;
+    content.appendChild(span);
 }
 
 document.addEventListener("keydown", function(e) {
