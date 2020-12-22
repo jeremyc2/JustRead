@@ -1,0 +1,19 @@
+#content {
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: xx-large;
+    font-weight: 600;
+    letter-spacing: -.009em;
+}
+#append-content-button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: #202124;
+    border-radius: 17px;
+    border-color: transparent;
+    padding: 15px;
+    color: white;
+    margin-top: 25px;
+}
+#append-content-button:hover {
+    background-color: #313b5a;
+}

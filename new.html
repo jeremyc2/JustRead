@@ -1,96 +1,9 @@
 <title>Just Read 2.0!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="simple.svg">
+<link rel="stylesheet" href="new.css">
 <script src="random.js"></script>
-<script>
-var i = 0;
-const urlParams = new URLSearchParams(window.location.search);
-
-var content;
-var appendContentButton;
-
-var promise;
-
-function buildBookmarkURL(index) {
-    return document.location.origin + document.location.pathname + `?index=${index}`
-    // window.history.replaceState(null, null, `?index=${index}`);
-}
-
-function injectText(index, text) {
-    if(content == null) return;
-
-    console.log(`ITI: ${index}`);
-
-    var span = document.createElement("span");
-    span.id = index;
-
-    span.innerHTML = text;
-    content.appendChild(span);
-    i = index;
-}
-
-function appendText(index, text) {
-    if(content == null) return;
-
-    console.log(`ATI: ${index}`);
-
-    var span = document.createElement("span");
-    span.id = index;
-
-    span.innerHTML += " " + text;
-    content.appendChild(span);
-}
-
-document.addEventListener("keydown", function(e) {
-    if(e.code == "Space") {
-        promise = getRandomSentence(injectText);
-    }
-});
-
-function isElementInViewport (el) {
-
-    var rect = el.getBoundingClientRect();
-
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-function appendContent() {
-    if(isElementInViewport(appendContentButton)) {
-        promise = promise
-            .then(() => getNextSentence(i, appendText))
-            .then(() => i++)
-            .then(() => {
-                if(isElementInViewport(appendContentButton)) {
-                    appendContent();
-                }
-            });
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    if(urlParams.has("index")) {
-        i = urlParams.get("index");
-        promise = getSentence(i, injectText);
-    } else {
-        promise = getFirstSentence(injectText);
-    }
-
-    content = document.getElementById("content");
-    appendContentButton = document.getElementById("append-content-button");
-    appendContent();
-
-    document.addEventListener('load', appendContent, false);
-    document.addEventListener('scroll', appendContent, false);
-    document.addEventListener('resize', appendContent, false);
-}, false);
-
-</script>
+<script src="new.js"></script>
 <script type="module">
     import interact from 
     'https://cdn.interactjs.io/v1.10.1/interactjs/index.js';
@@ -101,27 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 </script>
-<style>
-#content {
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: xx-large;
-    font-weight: 600;
-    letter-spacing: -.009em;
-}
-#append-content-button {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    background-color: #202124;
-    border-radius: 17px;
-    border-color: transparent;
-    padding: 15px;
-    color: white;
-    margin-top: 25px;
-}
-#append-content-button:hover {
-    background-color: #313b5a;
-}
-</style>
 <body>
     <div id="content"></div>
     <button id="append-content-button" onclick="appendContent()">LOAD MORE</button>
