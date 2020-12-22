@@ -51,10 +51,22 @@ function isElementInViewport (el) {
 function appendContent() {
     if(isElementInViewport(appendContentButton)) {
         if(promise == null) {
-            promise = getNextSentence(i, appendText).then(() => i++);
+            promise = getNextSentence(i, appendText)
+                .then(() => i++)
+                .then(() => {
+                    if(isElementInViewport(appendContentButton)) {
+                        appendContent();
+                    }
+                });
         }
         else {
-            promise = promise.then(() => getNextSentence(i++, appendText));
+            promise = promise
+                .then(() => getNextSentence(i++, appendText))
+                .then(() => {
+                    if(isElementInViewport(appendContentButton)) {
+                        appendContent();
+                    }
+                });
         }
     }
 }
