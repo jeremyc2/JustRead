@@ -1,9 +1,19 @@
-#content {
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: xx-large;
-    font-weight: 600;
-    letter-spacing: -.009em;
+body {
+    margin: 0px;
 }
+
+#content {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: #FFFDE7;
+    font-size: x-large;
+    line-height: 2em;
+    margin: 10px;
+    border: 1px solid #757575;
+    padding: 8px;
+    border-radius: 10px;
+}
+
 #append-content-button {
     margin-left: 50%;
     transform: translateX(-50%);
@@ -13,7 +23,9 @@
     padding: 15px;
     color: white;
     margin-top: 25px;
+    margin-bottom: 10px;
 }
+
 #append-content-button:hover {
     background-color: #313b5a;
 }
