@@ -35,3 +35,7 @@ button:hover {
 #prepend-content-button {
     margin-top: 10px;
 }
+
+.highlight {
+    background-color: rgb(144, 202, 249);
+}

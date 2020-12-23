@@ -14,7 +14,12 @@
     'https://cdn.interactjs.io/v1.10.1/interactjs/index.js';
         
     interact('span').on('hold', function (event) {
-        console.log(event.type, event.target);
-        event.target.style.backgroundColor = "#90caf9";
+
+        [...document.getElementsByClassName("highlight")].forEach(element => {
+            element.classList.remove("highlight");
+        });
+
+        event.target.classList.add("highlight");
+
     })
 </script>
