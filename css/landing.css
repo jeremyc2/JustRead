@@ -73,7 +73,7 @@ span {
 }
 
 #orange {
-    background-image: URL(orange.svg);
+    background-image: URL(../img/orange.svg);
     background-repeat: no-repeat;
 
     /* Animates to -200 200 */
@@ -81,7 +81,7 @@ span {
 }
 
 #revision {
-    background-image: URL(revision.svg);
+    background-image: URL(../img/revision.svg);
     background-repeat: repeat-x;
     background-size: 300px;
     background-position-y: center;
@@ -89,7 +89,7 @@ span {
 }
 
 #studyQuestions {
-    background-image: URL(study1.svg);
+    background-image: URL(../img/study1.svg);
     background-repeat: no-repeat;
     
     /* Animate to bottom -100px right 0px; */
@@ -97,21 +97,21 @@ span {
 }
 
 #search {
-    background-image: URL(magnifying-glass.svg);
+    background-image: URL(../img/magnifying-glass.svg);
     background-repeat: no-repeat;
     background-size: 400px;
     background-position: -150 150;
 }
 
 #lightbulb {
-    background-image: URL(lightbulb.svg);
+    background-image: URL(../img/lightbulb.svg);
     background-repeat: no-repeat;
     background-size: 350px;
     background-position: center;
 }
 
 #change {
-    background-image: URL(change.svg);
+    background-image: URL(../img/change.svg);
     background-repeat: no-repeat;
     background-size: 450px;
     background-position: center; 

@@ -49,14 +49,14 @@ button:hover {
 }
 
 #scrollToTop {
-  background-image: url(scroll-to-top.svg);
+  background-image: URL(../img/scroll-to-top.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80px;
 }
 
 #randomScroll {
-  background-image: url(random-scroll.svg);
+  background-image: URL(../img/random-scroll.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 91px;
