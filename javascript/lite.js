@@ -106,6 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(urlParams.has("index")) {
         i = j = urlParams.get("index");
+
+        if(i == 0) {
+            document.body.removeChild(prependContentButton);
+        }
+
         promise = getSentence(i, injectText);
     } else {
         document.body.removeChild(prependContentButton);
