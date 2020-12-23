@@ -41,7 +41,8 @@ function injectText(index, text) {
     console.log(`ITI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("click", bookmark);
+    $(span).bind("taphold",bookmark);
+ 
     span.id = index;
 
     span.innerHTML = text;
@@ -55,7 +56,8 @@ function prependText(index, text) {
     console.log(`PTI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("click", bookmark);
+    $(span).bind("taphold",bookmark);
+
     span.id = index;
 
     span.innerHTML += text + " ";
@@ -73,7 +75,8 @@ function appendText(index, text) {
     console.log(`ATI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("click", bookmark);
+    $(span).bind("taphold",bookmark);
+    
     span.id = index;
 
     span.innerHTML += " " + text;
