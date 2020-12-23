@@ -1,3 +1,5 @@
+$.event.special.tap.tapholdThreshold = 3000;
+
 var i = 0,
     j = 0;
 
@@ -76,7 +78,7 @@ function appendText(index, text) {
 
     var span = document.createElement("span");
     $(span).bind("taphold",bookmark);
-    
+
     span.id = index;
 
     span.innerHTML += " " + text;
