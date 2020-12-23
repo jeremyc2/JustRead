@@ -25,12 +25,6 @@ function buildBookmarkURL(index) {
 
 function bookmark(e) {
 
-    [...document.getElementsByClassName("highlight")].forEach(element => {
-        element.classList.remove("highlight");
-    });
-
-    e.target.classList.add("highlight");
-
     copy(buildBookmarkURL(e.target.id));
 
 }
