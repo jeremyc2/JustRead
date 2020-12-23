@@ -36,7 +36,14 @@ function injectText(index, text) {
     console.log(`ITI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("dblclick",function(e) {bookmark(e.target.id)})
+    span.addEventListener("dblclick", function(e) {
+        e.target.classList.add("selected");
+        bookmark(e.target.id);
+    });
+
+    span.addEventListener("animationend", function(e) {
+        e.target.classList.remove("selected");
+    });
  
     span.id = index;
 
@@ -51,7 +58,14 @@ function prependText(index, text) {
     console.log(`PTI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("dblclick",function(e) {bookmark(e.target.id)})
+    span.addEventListener("dblclick", function(e) {
+        e.target.classList.add("selected");
+        bookmark(e.target.id);
+    });
+
+    span.addEventListener("animationend", function(e) {
+        e.target.classList.remove("selected");
+    });
 
     span.id = index;
 
@@ -70,7 +84,14 @@ function appendText(index, text) {
     console.log(`ATI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("dblclick",function(e) {bookmark(e.target.id)})
+    span.addEventListener("dblclick", function(e) {
+        e.target.classList.add("selected");
+        bookmark(e.target.id);
+    });
+
+    span.addEventListener("animationend", function(e) {
+        e.target.classList.remove("selected");
+    });
 
     span.id = index;
 
