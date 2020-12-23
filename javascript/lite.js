@@ -1,5 +1,3 @@
-$.event.special.tap.tapholdThreshold = 1400;
-
 var i = 0,
     j = 0;
 
