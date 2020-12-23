@@ -9,19 +9,3 @@
     <div id="content"></div>
     <button id="append-content-button" onclick="appendContent()">&#9660;</button>
 </body>
-<script type="module">
-    import interact from 
-    'https://cdn.interactjs.io/v1.10.1/interactjs/index.js';
-        
-    interact('span').on('hold', function (event) {
-
-        [...document.getElementsByClassName("highlight")].forEach(element => {
-            element.classList.remove("highlight");
-        });
-
-        event.target.classList.add("highlight");
-
-        copy(buildBookmarkURL(event.target.id));
-
-    })
-</script>
