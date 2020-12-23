@@ -26,6 +26,7 @@ function buildBookmarkURL(index) {
 function bookmark(e) {
 
     copy(buildBookmarkURL(e.target.id));
+    alert("Copied position to clipboard!");
 
 }
 
