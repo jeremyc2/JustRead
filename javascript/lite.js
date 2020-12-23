@@ -38,11 +38,11 @@ function injectText(index, text) {
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
         e.target.classList.add("selected");
-        bookmark(e.target.id);
     });
 
     span.addEventListener("animationend", function(e) {
         e.target.classList.remove("selected");
+        bookmark(e.target.id);
     });
  
     span.id = index;
@@ -60,11 +60,11 @@ function prependText(index, text) {
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
         e.target.classList.add("selected");
-        bookmark(e.target.id);
     });
 
     span.addEventListener("animationend", function(e) {
         e.target.classList.remove("selected");
+        bookmark(e.target.id);
     });
 
     span.id = index;
@@ -86,11 +86,11 @@ function appendText(index, text) {
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
         e.target.classList.add("selected");
-        bookmark(e.target.id);
     });
 
     span.addEventListener("animationend", function(e) {
         e.target.classList.remove("selected");
+        bookmark(e.target.id);
     });
 
     span.id = index;
