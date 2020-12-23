@@ -9,3 +9,12 @@
     <div id="content"></div>
     <button id="append-content-button" onclick="appendContent()">&#9660;</button>
 </body>
+<script type="module">
+    import interact from 
+    'https://cdn.interactjs.io/v1.10.1/interactjs/index.js';
+        
+    interact('span').on('hold', function (event) {
+        console.log(event.type, event.target);
+        event.target.style.backgroundColor = "#90caf9";
+    })
+</script>
