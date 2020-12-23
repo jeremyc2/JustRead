@@ -15,8 +15,6 @@
         
     interact('span').on('hold', function (event) {
 
-        alert("Holding...");
-
         [...document.getElementsByClassName("highlight")].forEach(element => {
             element.classList.remove("highlight");
         });
