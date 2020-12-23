@@ -36,6 +36,16 @@ button:hover {
     margin-top: 10px;
 }
 
-/* .highlight {
-    background-color: rgb(144, 202, 249);
-} */
+span {
+    background: transparent;
+}
+
+.selected {
+    animation: mymove 1s;
+}
+
+@keyframes flash {
+    0% {background-color: transparent;}
+    50% {background-color: rgb(144, 202, 249);}
+    100% {background-color: transparent;}
+}
