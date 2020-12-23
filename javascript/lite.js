@@ -23,9 +23,9 @@ function buildBookmarkURL(index) {
     // window.history.replaceState(null, null, `?index=${index}`);
 }
 
-function bookmark(e) {
+function bookmark(id) {
 
-    copy(buildBookmarkURL(e.target.id));
+    copy(buildBookmarkURL(id));
     alert("Copied position to clipboard!");
 
 }
@@ -36,7 +36,7 @@ function injectText(index, text) {
     console.log(`ITI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("dblclick",function(e) {console.log(e.target.id); bookmark(e.target.id)})
+    span.addEventListener("dblclick",function(e) {bookmark(e.target.id)})
  
     span.id = index;
 
@@ -51,7 +51,7 @@ function prependText(index, text) {
     console.log(`PTI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("dblclick",function(e) {console.log(e.target.id); bookmark(e.target.id)})
+    span.addEventListener("dblclick",function(e) {bookmark(e.target.id)})
 
     span.id = index;
 
@@ -70,7 +70,7 @@ function appendText(index, text) {
     console.log(`ATI: ${index}`);
 
     var span = document.createElement("span");
-    span.addEventListener("dblclick",function(e) {console.log(e.target.id); bookmark(e.target.id)})
+    span.addEventListener("dblclick",function(e) {bookmark(e.target.id)})
 
     span.id = index;
 
