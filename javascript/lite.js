@@ -1,8 +1,11 @@
-var i = 0;
+var i = 0,
+    j = 0;
+
 const urlParams = new URLSearchParams(window.location.search);
 
-var content;
-var appendContentButton;
+var content,
+    prependContentButton,
+    appendContentButton;
 
 var promise;
 
@@ -21,7 +24,24 @@ function injectText(index, text) {
 
     span.innerHTML = text;
     content.appendChild(span);
-    i = index;
+    i = j = index;
+}
+
+function prependText(index, text) {
+    if(content == null) return;
+
+    console.log(`PTI: ${index}`);
+
+    var span = document.createElement("span");
+    span.id = index;
+
+    span.innerHTML += text + " ";
+    content.insertBefore(span,content.firstChild);
+
+    if(index <= 0) {
+        document.body.removeChild(prependContentButton);
+    }
+
 }
 
 function appendText(index, text) {
@@ -48,6 +68,18 @@ function isElementInViewport (el) {
     );
 }
 
+function prependContent() {
+
+    const prependMax = 10;
+    for (var prependIndex = 0; prependIndex < prependMax; prependIndex++) {
+
+        promise = promise
+            .then(() => getPreviousSentence(j, prependText))
+            .then(() => j--);
+    }
+
+}
+
 function appendContent() {
     if(i >= 7624) {
         document.body.removeChild(appendContentButton);
@@ -68,15 +100,18 @@ function appendContent() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    content = document.getElementById("content");
+    prependContentButton = document.getElementById("prepend-content-button");
+    appendContentButton = document.getElementById("append-content-button");
+
     if(urlParams.has("index")) {
-        i = urlParams.get("index");
+        i = j = urlParams.get("index");
         promise = getSentence(i, injectText);
     } else {
+        document.body.removeChild(prependContentButton);
         promise = getFirstSentence(injectText);
     }
 
-    content = document.getElementById("content");
-    appendContentButton = document.getElementById("append-content-button");
     appendContent();
 
     document.addEventListener('load', appendContent, false);

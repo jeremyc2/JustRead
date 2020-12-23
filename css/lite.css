@@ -14,7 +14,7 @@ body {
     border-radius: 10px;
 }
 
-#append-content-button {
+button {
     margin-left: 50%;
     transform: translateX(-50%);
     background-color: #202124;
@@ -22,10 +22,16 @@ body {
     border-color: transparent;
     padding: 15px;
     color: white;
-    margin-top: 25px;
+}
+
+button:hover {
+    background-color: #313b5a;
+}
+
+#append-content-button {
     margin-bottom: 10px;
 }
 
-#append-content-button:hover {
-    background-color: #313b5a;
+#prepend-content-button {
+    margin-top: 10px;
 }
