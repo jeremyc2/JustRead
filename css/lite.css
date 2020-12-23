@@ -41,7 +41,7 @@ span {
 }
 
 .selected {
-    animation: flash 1s;
+    animation: flash 0.5s;
 }
 
 @keyframes flash {
