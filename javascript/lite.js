@@ -83,6 +83,7 @@ function prependText(index, text) {
 
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
+        window.getSelection().removeAllRanges();
         selected = e.target;
         selected.classList.add("selected");
     });
@@ -110,6 +111,7 @@ function appendText(index, text) {
 
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
+        window.getSelection().removeAllRanges();
         selected = e.target;
         selected.classList.add("selected");
     });
