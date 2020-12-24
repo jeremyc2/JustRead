@@ -65,11 +65,11 @@ span {
 
 .show {
     display: block !important;
-    animation: darken 1s forwards;
+    animation: darken 0.5s forwards;
 }
 
 .show div {
-    animation: popup 1s forwards;
+    animation: popup 0.5s forwards;
 }
 
 @keyframes darken {
