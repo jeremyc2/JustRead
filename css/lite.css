@@ -15,8 +15,6 @@ body {
 }
 
 button {
-    margin-left: 50%;
-    transform: translateX(-50%);
     background-color: #202124;
     border-radius: 17px;
     border-color: transparent;
@@ -30,13 +28,18 @@ button:hover {
 
 #bookmark {
     margin-top: 25px;
+    height: fit-content;
 }
 
 #append-content-button {
+    margin-left: 50%;
+    transform: translateX(-50%);
     margin-bottom: 10px;
 }
 
 #prepend-content-button {
+    margin-left: 50%;
+    transform: translateX(-50%);
     margin-top: 10px;
 }
 
@@ -58,6 +61,8 @@ span {
 }
 
 #options {
+    display: flex;
+    justify-content: space-evenly;
     position: fixed;
     width: 100%;
     height: 100px;

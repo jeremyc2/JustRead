@@ -22,19 +22,34 @@ function copy(text) {
 
 function buildBookmarkURL(index) {
     return document.location.origin + document.location.pathname + `?index=${index}`
-    // window.history.replaceState(null, null, `?index=${index}`);
 }
 
-function bookmark() {
+function bookmarkToClipboard() {
 
     copy(buildBookmarkURL(selected.id));
+    hideModal();
 
+}
+
+function bookmarkToHistory() {
+    window.history.pushState(null, null, `?index=${selected.id}`);
+    hideModal();
 }
 
 function showModal() {
     modal.style.display = "block";
     modal.classList.remove("hide");
     modal.classList.add("show");
+}
+
+function hideModal() {
+
+    modal.classList.remove("show");
+
+    // https://css-tricks.com/restart-css-animation/
+    void modal.offsetWidth;
+    
+    modal.classList.add("hide");
 }
 
 function injectText(index, text) {
@@ -164,14 +179,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    modal.addEventListener("click", function(e) {
-        e.target.classList.remove("show");
+    document.getElementById("options").addEventListener("click", function(e) {e.stopPropagation()});
 
-        // https://css-tricks.com/restart-css-animation/
-        void e.target.offsetWidth;
-        
-        e.target.classList.add("hide");
-    })
+    modal.addEventListener("click", hideModal)
 
     if(urlParams.has("index")) {
         i = j = urlParams.get("index");
