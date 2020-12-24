@@ -199,6 +199,10 @@ document.addEventListener('DOMContentLoaded', () => {
         promise = getFirstSentence(injectText);
     }
 
+    if(urlParams.has("welcome")) {
+        document.getElementById("welcome").style.display = "block";
+    }
+
     appendContent();
 
     document.addEventListener('load', appendContent, false);
