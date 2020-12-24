@@ -11,7 +11,7 @@ body {
 #bottom {
   position: sticky;
   bottom: 0px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: black;
   border: none;
   border-radius: unset;
   margin: unset;
