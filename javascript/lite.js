@@ -149,6 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
     appendContentButton = document.getElementById("append-content-button");
     modal = document.getElementById("modal");
 
+    modal.addEventListener("click", function(e) {
+        e.target.classList.remove("show");
+    })
+
     if(urlParams.has("index")) {
         i = j = urlParams.get("index");
 
