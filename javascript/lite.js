@@ -27,6 +27,8 @@ function buildBookmarkURL(index) {
 function bookmark(id) {
 
     copy(buildBookmarkURL(id));
+    modal.style.display = "block";
+    modal.classList.remove("hide");
     modal.classList.add("show");
 
 }
@@ -149,8 +151,19 @@ document.addEventListener('DOMContentLoaded', () => {
     appendContentButton = document.getElementById("append-content-button");
     modal = document.getElementById("modal");
 
+    modal.addEventListener("animationend", function(e) {
+        if(e.target.classList.contains("hide")) {
+            e.target.style.display = "none";
+        }
+    });
+
     modal.addEventListener("click", function(e) {
         e.target.classList.remove("show");
+
+        // https://css-tricks.com/restart-css-animation/
+        void e.target.offsetWidth;
+        
+        e.target.classList.add("hide");
     })
 
     if(urlParams.has("index")) {

@@ -51,7 +51,6 @@ span {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    background-color: transparent;
 }
 
 #options {
@@ -63,22 +62,35 @@ span {
     border-radius: 20px 20px 0px 0px;
 }
 
-.show {
-    display: block !important;
+#modal.show {
     animation: darken 0.5s forwards;
 }
 
-.show #options {
+#modal.hide {
+    animation: darken 0.5s reverse;
+}
+
+#modal.show #options {
     animation: popup 0.5s forwards;
 }
 
+#modal.hide #options {
+    animation: popup 0.5s reverse;
+}
+
 @keyframes darken {
+    from {
+        background-color: transparent;
+    }
     to {
         background-color: rgba(0,0,0,0.4);
     }
 }
 
 @keyframes popup {
+    from {
+        bottom: -100px;
+    }
     to {
         bottom: 0px;
     }
