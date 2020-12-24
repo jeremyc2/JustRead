@@ -68,7 +68,7 @@ span {
     animation: darken 0.5s forwards;
 }
 
-.show div {
+.show #options {
     animation: popup 0.5s forwards;
 }
 
