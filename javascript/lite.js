@@ -59,6 +59,7 @@ function injectText(index, text) {
 
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
+        window.getSelection().removeAllRanges();
         selected = e.target;
         selected.classList.add("selected");
     });
