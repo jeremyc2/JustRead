@@ -6,7 +6,7 @@ const urlParams = new URLSearchParams(window.location.search);
 var content,
     prependContentButton,
     appendContentButton,
-    options;
+    modal;
 
 var promise;
 
@@ -27,7 +27,7 @@ function buildBookmarkURL(index) {
 function bookmark(id) {
 
     copy(buildBookmarkURL(id));
-    options.classList.add("popup");
+    modal.classList.add("show");
 
 }
 
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     content = document.getElementById("content");
     prependContentButton = document.getElementById("prepend-content-button");
     appendContentButton = document.getElementById("append-content-button");
-    options = document.getElementById("options");
+    modal = document.getElementById("modal");
 
     if(urlParams.has("index")) {
         i = j = urlParams.get("index");
