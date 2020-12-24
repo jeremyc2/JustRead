@@ -6,7 +6,8 @@ const urlParams = new URLSearchParams(window.location.search);
 var content,
     prependContentButton,
     appendContentButton,
-    modal;
+    modal,
+    selected;
 
 var promise;
 
@@ -24,13 +25,16 @@ function buildBookmarkURL(index) {
     // window.history.replaceState(null, null, `?index=${index}`);
 }
 
-function bookmark(id) {
+function bookmark() {
 
-    copy(buildBookmarkURL(id));
+    copy(buildBookmarkURL(selected.id));
+
+}
+
+function showModal() {
     modal.style.display = "block";
     modal.classList.remove("hide");
     modal.classList.add("show");
-
 }
 
 function injectText(index, text) {
@@ -40,12 +44,13 @@ function injectText(index, text) {
 
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
-        e.target.classList.add("selected");
+        selected = e.target;
+        selected.classList.add("selected");
     });
 
     span.addEventListener("animationend", function(e) {
         e.target.classList.remove("selected");
-        bookmark(e.target.id);
+        showModal();
     });
  
     span.id = index;
@@ -62,12 +67,13 @@ function prependText(index, text) {
 
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
-        e.target.classList.add("selected");
+        selected = e.target;
+        selected.classList.add("selected");
     });
 
     span.addEventListener("animationend", function(e) {
         e.target.classList.remove("selected");
-        bookmark(e.target.id);
+        showModal();
     });
 
     span.id = index;
@@ -88,12 +94,13 @@ function appendText(index, text) {
 
     var span = document.createElement("span");
     span.addEventListener("dblclick", function(e) {
-        e.target.classList.add("selected");
+        selected = e.target;
+        selected.classList.add("selected");
     });
 
     span.addEventListener("animationend", function(e) {
         e.target.classList.remove("selected");
-        bookmark(e.target.id);
+        showModal();
     });
 
     span.id = index;

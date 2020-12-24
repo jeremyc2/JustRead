@@ -28,6 +28,10 @@ button:hover {
     background-color: #313b5a;
 }
 
+#bookmark {
+    margin-top: 25px;
+}
+
 #append-content-button {
     margin-bottom: 10px;
 }
