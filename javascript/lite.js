@@ -36,10 +36,6 @@ function bookmarkToHistory() {
     hideModal();
 }
 
-function unwelcome() {
-    document.getElementById("welcome").style.display = "none";
-}
-
 function showModal() {
     modal.style.display = "block";
     modal.classList.remove("hide");
@@ -201,10 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         document.body.removeChild(prependContentButton);
         promise = getFirstSentence(injectText);
-    }
-
-    if(urlParams.has("welcome")) {
-        document.getElementById("welcome").style.display = "block";
     }
 
     appendContent();
