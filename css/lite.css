@@ -4,13 +4,15 @@ body {
 
 #welcome {
     display: none;
-    position: fixed;
     left: 0;
     top: 0;
-    width: 2em; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%; /* Full width */
     background-color: white;
     z-index: 10;
+    text-align: center;
+    height: 4em;
+    line-height: 4em;
+    white-space: nowrap;
 }
 
 #content {
