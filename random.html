@@ -12,7 +12,7 @@ var i = 0,
 var isTouchEnabled = "ontouchstart" in document.documentElement;
 
 function injectText(index, text) {
-    
+
     if(content == null) {
         content = document.getElementById("content");
     }
@@ -52,7 +52,11 @@ if(isTouchEnabled) {
 }
 </script>
 <style>
+body {
+    margin: 0px;
+}
 #content {
+    margin: 10px;
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: xx-large;
     font-weight: 600;
