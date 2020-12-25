@@ -7,7 +7,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width: 2em; /* Full width */
     height: 100%; /* Full height */
     background-color: white;
     z-index: 10;
