@@ -6,11 +6,18 @@
 <script src="javascript/swipe.js"></script>
 <script src="javascript/welcome.js"></script>
 <script>
-var i = 0;
+var i = 0,
+    content;
+
 var isTouchEnabled = "ontouchstart" in document.documentElement;
 
 function injectText(index, text) {
-    document.getElementById("content").innerHTML = text;
+    
+    if(content == null) {
+        content = document.getElementById("content");
+    }
+
+    content.innerHTML = text;
     i = index;
 }
 
@@ -52,7 +59,6 @@ if(isTouchEnabled) {
     letter-spacing: -.009em;
 }
 </style>
-<!-- TODO FIXME NOT SHOWING UP -->
 <div id="welcome">
     <span class="close" onclick="unwelcome()">&times;</span>
     Try <a href="read.html?welcome">Just Read!</a> and <a href="big.html?welcome">Just Big!</a>
