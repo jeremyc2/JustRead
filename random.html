@@ -10,7 +10,7 @@ var i = 0;
 var isTouchEnabled = "ontouchstart" in document.documentElement;
 
 function injectText(index, text) {
-    document.body.innerHTML = text;
+    document.getElementById("content").innerHTML = text;
     i = index;
 }
 
@@ -45,7 +45,7 @@ if(isTouchEnabled) {
 }
 </script>
 <style>
-body {
+#content {
     font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: xx-large;
     font-weight: 600;
@@ -56,4 +56,7 @@ body {
 <div id="welcome">
     <span class="close" onclick="unwelcome()">&times;</span>
     Try <a href="read.html?welcome">Just Read!</a> and <a href="big.html?welcome">Just Big!</a>
+</div>
+<div id="content">
+
 </div>
