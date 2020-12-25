@@ -203,5 +203,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('load', appendContent, false);
     document.addEventListener('scroll', appendContent, false);
-    document.addEventListener('resize', appendContent, false);
+    window.addEventListener('resize', appendContent, false);
 }, false);
