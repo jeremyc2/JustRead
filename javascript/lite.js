@@ -36,6 +36,10 @@ function bookmarkToHistory() {
     hideModal();
 }
 
+function unwelcome() {
+    document.getElementById("welcome").style.display = "none";
+}
+
 function showModal() {
     modal.style.display = "block";
     modal.classList.remove("hide");
