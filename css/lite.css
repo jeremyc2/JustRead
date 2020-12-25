@@ -4,7 +4,7 @@ body {
 
 #welcome {
     display: none;
-    width: 100%;
+    width: calc(100% - 22px);
     background-color: #e5e8ff;
     z-index: 10;
     text-align: center;
