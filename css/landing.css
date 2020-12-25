@@ -126,6 +126,7 @@ a {
     display: block;
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {

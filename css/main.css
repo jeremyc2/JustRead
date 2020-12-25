@@ -42,6 +42,7 @@ button {
   border-radius: 17px;
   border-color: transparent;
   width: calc(50% - 40px);
+  cursor: pointer;
 }
 
 button:hover {
