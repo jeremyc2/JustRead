@@ -1,5 +1,5 @@
-function unwelcome() {
-    document.getElementById("welcome").style.display = "none";
+function close(e) {
+    e.target.parentElement.style.display = "none";
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if(params.has("welcome")) {
-        document.getElementById("welcome").style.display = "block";
+        [...document.getElementsByClassName("message")].forEach(element => {
+            element.style.display = "block";
+        });
     }
 });
