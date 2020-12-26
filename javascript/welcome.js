@@ -1,5 +1,5 @@
-function close(e) {
-    e.target.parentElement.style.display = "none";
+function close(el) {
+    el.parentElement.style.display = "none";
 }
 
 document.addEventListener('DOMContentLoaded', () => {
