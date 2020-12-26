@@ -1,4 +1,4 @@
-#welcome {
+.message {
     display: none;
     width: calc(100% - 22px);
     background-color: #e5e8ff;
