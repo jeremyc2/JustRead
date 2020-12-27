@@ -7,12 +7,13 @@
 <script src="javascript/random.js"></script>
 <script src="javascript/lite.js"></script>
 <script src="javascript/message.js"></script>
+<script src="javascript/help.js"></script>
 <body>
     <div id="welcome" class="message">
         <span class="close" onclick="closeMessage(this)">&times;</span>
         Try <a href="random.html?welcome">Just Random!</a> and <a href="big.html?welcome">Just Big!</a>
     </div>
-    <button id="help">
+    <button id="help" onclick="showHelp">
         <span>?</span><span>Help</span>
     </button>
     <div id="help-container">
