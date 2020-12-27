@@ -58,10 +58,10 @@
 
 #help-dialog > div {
   background: white;
-  width: fit-content;
-  height: fit-content;
-  padding: 20px;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
   border: 1px solid #757575;
   border-radius: 10px;
   font-family: monospace;
+  padding: 50px;
 }
