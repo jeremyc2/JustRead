@@ -153,11 +153,12 @@ function prependContent() {
 
 function appendContent() {
     if(i >= 7624) {
-        try {
+        
+        if(appendContentButton != null) {
             document.body.removeChild(appendContentButton);
-        } catch (error) {
-            console.log("Append content button no longer attached")
         }
+
+        appendContentButton = null;
         return;
     }
 
