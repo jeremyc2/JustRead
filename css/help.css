@@ -38,8 +38,8 @@
 #help-dialog {
   background-color: hsl(143 100% 95% / 1);
   position: absolute;
-  width: 70vw;
-  height: 70vh;
+  width: calc(90vw - 150px);
+  height: calc(90vh - 150px);
   z-index: 200;
   border-radius: 10px;
   border: 1px solid #757575;
