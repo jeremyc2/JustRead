@@ -1,7 +1,5 @@
 /* TODO Make this stick out farther and have a question mark icon */
 #help {
-  display: flex;
-  justify-content: space-between;
   padding: 15 7;
   position: fixed; 
   bottom: 100px;
@@ -16,6 +14,10 @@
   color: black;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+#help > span:nth-child(2) {
+    width: 75px;
 }
 
 #help:hover {
