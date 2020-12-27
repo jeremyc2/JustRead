@@ -23,7 +23,7 @@ body {
 
 }
 
-div {
+div:not(#help-container) {
   font-family: sans-serif;
   overflow-x: hidden;
   background-color: #FFFDE7;
