@@ -1,5 +1,8 @@
 /* TODO Make this stick out farther and have a question mark icon */
 #help {
+  display: flex;
+  justify-content: space-between;
+  padding: 15 7;
   position: fixed; 
   bottom: 100px;
   right: -77px; /* Position them outside of the screen */
