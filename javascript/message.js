@@ -1,5 +1,4 @@
-function close(el) {
-    console.log(el.parentElement);
+function closeMessage(el) {
     el.parentElement.style.display = "none";
 }
 
