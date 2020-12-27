@@ -51,7 +51,7 @@
   transform: translateX(-50%);
 }
 
-#help-dialog > h1 {
+#help-dialog > div > h1 {
   text-align: center;
 }
 
