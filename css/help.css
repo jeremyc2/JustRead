@@ -41,8 +41,10 @@
   justify-content: center;
   background-color: hsl(143 100% 95% / 1);
   position: fixed;
-  width: calc(90vw - 150px);
-  height: calc(90vh - 150px);
+  max-width: calc(90vw - 150px);
+  max-height: calc(90vh - 150px);
+  padding: 50px;
+  min-height: calc(100vh - 400px);
   z-index: 200;
   border-radius: 10px;
   border: 1px solid #757575;
