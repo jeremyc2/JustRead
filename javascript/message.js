@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if(params.has("welcome")) {
-        [...document.getElementsByClassName("message")].forEach(element => {
-            element.style.display = "block";
-        });
+        document.getElementById("welcome").style.display = "block"
     }
 });
