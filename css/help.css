@@ -1,6 +1,6 @@
 /* TODO Make this stick out farther and have a question mark icon */
 #help {
-  padding: 15 7;
+  padding: 15 5 15 0;
   position: fixed; 
   bottom: 100px;
   right: -77px; /* Position them outside of the screen */
@@ -17,7 +17,8 @@
 }
 
 #help > span:nth-child(2) {
-    width: 75px;
+    padding-left: 24px;
+    padding-right: 18px;
 }
 
 #help:hover {
