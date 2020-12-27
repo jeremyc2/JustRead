@@ -1,14 +1,19 @@
 #help {
-  position: absolute; /* Position them relative to the browser window */
-  top: 20px;
-  left: -80px; /* Position them outside of the screen */
+  position: fixed; 
+  bottom: 35px;
+  right: -77px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
   padding: 15px; /* 15px padding */
   width: 100px; /* Set a specific width */
   text-decoration: none; /* Remove underline */
-  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+  border-radius: 5px 0 0 5px; /* Rounded corners on the top right and bottom right side */
+  background-color: hsl(143 100% 95% / 1);
+  border: 1px solid #757575;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 #help:hover {
-  left: 0; /* On mouse-over, make the elements appear as they should */
+  right: -1; /* On mouse-over, make the elements appear as they should */
 }
