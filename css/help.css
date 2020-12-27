@@ -7,7 +7,6 @@
   bottom: 100px;
   right: -77px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
-  padding: 15px; /* 15px padding */
   height: auto;
   width: 100px; /* Set a specific width */
   text-decoration: none; /* Remove underline */
