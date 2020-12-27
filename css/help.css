@@ -13,8 +13,11 @@
 }
 
 #help-container.show {
-  display: block;
   animation: fade-in 0.5s forwards;
+}
+
+#help-container.hide {
+  animation: fade-in 0.5s reverse;
 }
 
 #help {
