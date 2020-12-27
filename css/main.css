@@ -11,10 +11,10 @@ body {
 #bottom {
   position: sticky;
   bottom: 0px;
-  background-color: black;
-  border: none;
-  border-radius: unset;
-  margin: unset;
+  background-color: black !important;
+  border: none !important;
+  border-radius: unset !important;
+  margin: unset !important;
   height: 70px;
 
   display: flex;
@@ -24,7 +24,7 @@ body {
 }
 
 /* TODO FIXME */
-div:not(#help-container), div:not(.message) {
+div:not(#help-container):not(.message) {
   font-family: sans-serif;
   overflow-x: hidden;
   background-color: #FFFDE7;
