@@ -4,12 +4,13 @@
 
 #help-container {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   background-color: black;
+  z-index: 200;
 }
 
 #help-container.show {
