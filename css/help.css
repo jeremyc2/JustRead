@@ -1,12 +1,13 @@
 #help {
   position: fixed; 
-  bottom: 35px;
+  bottom: 100px;
   right: -77px; /* Position them outside of the screen */
   transition: 0.3s; /* Add transition on hover */
   padding: 15px; /* 15px padding */
+  height: auto;
   width: 100px; /* Set a specific width */
   text-decoration: none; /* Remove underline */
-  border-radius: 5px 0 0 5px; /* Rounded corners on the top right and bottom right side */
+  border-radius: 5px 0 0 5px;
   background-color: hsl(143 100% 95% / 1);
   border: 1px solid #757575;
   color: black;
