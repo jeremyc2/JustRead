@@ -1,31 +1,18 @@
 .message {
     display: none;
+    background-color: hsl(233deg 100% 95%);
     width: calc(100% - 22px);
     z-index: 10;
     text-align: center;
     height: 3em;
     line-height: 3em;
     white-space: nowrap;
-    border-bottom: 1px solid #757575;
-    border-left: 1px solid #757575;
-    border-right: 1px solid #757575;
+    border: 1px solid #757575;
     padding: 0 10 0 10;
     border-radius: initial;
     margin: 0;
     font-size: initial;
     font-family: sans-serif;
-}
-
-.message:first-child{
-    border-top: 1px solid #757575;
-}
-
-.message:nth-child(2n+1) {
-    background-color: hsl(233deg 100% 95%);
-}
-
-.message:nth-child(2n+0) {
-    background-color: hsl(143 100% 95% / 1);
 }
 
 /* The Close Button */
