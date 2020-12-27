@@ -33,12 +33,14 @@ button:hover {
 }
 
 #append-content-button {
+    z-index: 1;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-bottom: 10px;
 }
 
 #prepend-content-button {
+    z-index: 1;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 10px;
