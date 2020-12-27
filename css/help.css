@@ -5,7 +5,7 @@
 #help {
   display: flex;
   align-items: center;
-  padding: 15 5px 15px 3px;
+  padding: 15 5px 15px 2.5px;
   position: fixed; 
   bottom: 100px;
   right: -77px; /* Position them outside of the screen */
