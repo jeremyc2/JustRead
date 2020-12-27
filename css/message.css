@@ -16,8 +16,11 @@
     font-family: sans-serif;
 }
 
-.message:nth-child(2n+1) {
+.message:first-child{
     border-top: 1px solid #757575;
+}
+
+.message:nth-child(2n+1) {
     background-color: hsl(233deg 100% 95%);
 }
 
