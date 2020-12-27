@@ -36,6 +36,9 @@
 }
 
 #help-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: hsl(143 100% 95% / 1);
   position: fixed;
   width: calc(90vw - 150px);
@@ -46,4 +49,13 @@
   bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#help-dialog > div {
+  background: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  border: 1px solid #757575;
+  border-radius: 10px;
 }
