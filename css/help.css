@@ -37,7 +37,7 @@
 
 #help-dialog {
   background-color: hsl(143 100% 95% / 1);
-  position: absolute;
+  position: fixed;
   width: calc(90vw - 150px);
   height: calc(90vh - 150px);
   z-index: 200;
