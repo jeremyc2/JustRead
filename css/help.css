@@ -45,5 +45,5 @@
   border: 1px solid #757575;
   bottom: 100px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
