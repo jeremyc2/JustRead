@@ -51,6 +51,10 @@
   transform: translateX(-50%);
 }
 
+#help-dialog > h1 {
+  text-align: center;
+}
+
 #help-dialog > div {
   background: white;
   width: fit-content;
@@ -58,4 +62,5 @@
   padding: 20px;
   border: 1px solid #757575;
   border-radius: 10px;
+  font-family: monospace;
 }
