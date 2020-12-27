@@ -34,3 +34,7 @@
 #help:hover {
   right: -1; /* On mouse-over, make the elements appear as they should */
 }
+
+#help-dialog {
+  background-color: hsl(143 100% 95% / 1);
+}
