@@ -61,12 +61,12 @@
   background-color: #000000b0 !important;
   position: fixed;
   width: calc(90vw - 150px);
-  height: calc(100vh - 200px);
+  max-height: calc(100vh - 200px);
   padding: 50px !important;
   z-index: 200;
   border-radius: 10px !important;
   border: 1px solid #757575 !important;
-  bottom: 50px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
