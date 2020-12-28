@@ -23,8 +23,7 @@ body {
 
 }
 
-/* TODO FIXME */
-div:not(#help-container):not(.message) {
+div.content {
   font-family: sans-serif;
   overflow-x: hidden;
   background-color: #FFFDE7;

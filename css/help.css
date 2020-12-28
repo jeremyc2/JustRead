@@ -1,5 +1,3 @@
-/* TODO Make this stick out farther and have a question mark icon */
-
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 #help-container {
@@ -70,10 +68,6 @@
   bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
-
-  font-size: initial !important;
-  line-height: unset !important;
-  margin: 0 !important;
 }
 
 #help-dialog > div > h1 {
