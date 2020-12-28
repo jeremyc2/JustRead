@@ -93,7 +93,8 @@
   height: -webkit-fill-available;
   border: 1px solid #757575 !important;
   font-family: monospace !important;
-  padding: 50px !important;
+  padding: 10px !important;
+  overflow-y: scroll;
 }
 
 
