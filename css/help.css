@@ -57,7 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsl(143 100% 95% / 1) !important;
+  background-color: #000000b0 !important;
   position: fixed;
   width: calc(90vw - 150px);
   height: calc(90vh - 150px);
@@ -88,7 +88,7 @@
 }
 
 #help-dialog > div {
-  background: white !important;
+  background: hsl(143 100% 95% / 1) !important;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
   border: 1px solid #757575 !important;
