@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000000b0 !important;
+  background-color: hsl(143 100% 95% / 1) !important;
   position: fixed;
   width: calc(90vw - 150px);
   max-height: calc(100vh - 200px);
@@ -76,7 +76,7 @@
   width: 35px;
   height: 32px;
   border-radius: 0px 10px 0px 10px;
-  background-color: hsl(143 100% 95% / 1);
+  background-color: hsl(143 100% 97% / 1);
   border: 1px solid #757575 !important;
   position: absolute;
   top: -1;
@@ -89,7 +89,7 @@
 }
 
 #help-dialog > div {
-  background: hsl(143 100% 95% / 1) !important;
+  background-color: hsl(143 100% 97% / 1) !important;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
   border: 1px solid #757575 !important;
