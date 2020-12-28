@@ -38,6 +38,7 @@
   text-transform: uppercase;
   font-weight: bold;
   z-index: 201;
+  cursor: pointer;
 }
 
 #help > span:nth-child(1) {
