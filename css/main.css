@@ -15,7 +15,7 @@ body {
   border: none !important;
   border-radius: unset !important;
   margin: unset !important;
-  height: 70px;
+  height: 85px;
 
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@ div.content {
 }
 
 button {
-  height: 100%;
+  height: 65px;
   width: 200px;
   background-color: #202124;
   border-radius: 17px;

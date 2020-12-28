@@ -26,4 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.getElementById("help-dialog").addEventListener("click", function(e) {e.stopPropagation()});
+
+    help.addEventListener("click", hideHelp)
+
 });
