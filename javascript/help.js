@@ -16,6 +16,14 @@ function hideHelp() {
     help.classList.add("hide");
 }
 
+function toggleHelp() {
+    if(help.classList.contains("show")) {
+        hideHelp();
+    } else {
+        showHelp();
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     help = document.getElementById("help-container");
