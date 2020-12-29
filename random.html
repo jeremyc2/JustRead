@@ -13,6 +13,10 @@ var i = 0,
 
 var isTouchEnabled = "ontouchstart" in document.documentElement;
 
+function goToJustRead() {
+    window.location.href = `read.html?welcome&index=${i}`;
+}
+
 function injectText(index, text) {
 
     if(content == null) {
@@ -76,6 +80,11 @@ body {
     padding: 15px;
     color: white;
     cursor: pointer;
+    position: fixed;
+    bottom: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
 }
 #load-just-read:hover {
     background-color: #313b5a;
@@ -108,4 +117,4 @@ body {
 <div id="content">
 
 </div>
-<div id="load-just-read"></div>
+<button id="load-just-read" onclick="goToJustRead()">Open Just Read! at this location</button>
