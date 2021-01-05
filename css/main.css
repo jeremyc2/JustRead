@@ -1,5 +1,5 @@
 :root {
-  background-color: #EEEEEE;
+  background-color: #f4f5f7;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -26,11 +26,11 @@ body {
 div.content {
   font-family: sans-serif;
   overflow-x: hidden;
-  background-color: #FFFDE7;
+  background-color: white;
   font-size: x-large;
   line-height: 2em;
   margin: 10px;
-  border: 1px solid #757575;
+  border: 1px solid #dadce0;
   padding: 8px;
   border-radius: 10px;
 }
