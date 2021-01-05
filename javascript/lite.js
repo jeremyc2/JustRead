@@ -1,3 +1,6 @@
+// TODO Insert random span.tab every 1 to 4 sentences whether by injectText() 
+// prependText() or appendText()
+
 var i = 0,
     j = 0;
 
