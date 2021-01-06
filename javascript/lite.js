@@ -23,7 +23,7 @@ function copy(text) {
 // Insert random span.tab every 1 to 4 sentences whether 
 // by injectText() prependText() or appendText()
 var paragraphLength = 0;
-function isNewParagraph() {
+function isNewParagraph(isPrepended) {
 
     if (paragraphLength >= 3 || Math.random() < 0.25) {
         paragraphLength = 0;
@@ -111,7 +111,7 @@ function prependText(index, text) {
     span.id = index;
 
     // TODO FIXME
-    span.innerHTML += (isNewParagraph()? `</br><span class="tab"></span>${text}` : text) + " ";
+    span.innerHTML += (isNewParagraph(true)? `<span class="tab"></span>${text}</br>` : text) + " ";
     content.insertBefore(span,content.firstChild);
 
     if(index <= 0) {
@@ -139,7 +139,7 @@ function appendText(index, text) {
 
     span.id = index;
 
-    span.innerHTML += (isNewParagraph()? `</br><span class="tab"></span>${text}` : text) + " ";
+    span.innerHTML += (isNewParagraph(false)? `</br><span class="tab"></span>${text}` : text) + " ";
     content.appendChild(span);
 }
 
