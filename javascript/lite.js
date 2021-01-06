@@ -33,8 +33,7 @@ function isNewParagraph(isPrepended) {
             paragraph.prepend++;
             return false;
         }      
-    }
-    else {
+    } else {
         if (paragraph.postpend >= 3 || Math.random() < 0.25) {
             paragraph.postpend = 0;
             return true;
@@ -122,13 +121,10 @@ function prependText(index, text) {
     span.id = index;
 
     var firstChild = content.firstChild;
-
-    if(isNewParagraph(true)) {
-        if(firstChild.innerHTML.startsWith("<span class=\"tab\">")) {
-            firstChild.innerHTML = "</br>" + firstChild.innerHTML;
-        } else {
-            firstChild.innerHTML = "</br><span class=\"tab\"></span>" + firstChild.innerHTML;
-        }
+    if(firstChild.innerHTML.startsWith("<span class=\"tab\">")) {
+        firstChild.innerHTML = "</br>" + firstChild.innerHTML;
+    } else if(isNewParagraph(true)) {
+        firstChild.innerHTML = "</br><span class=\"tab\"></span>" + firstChild.innerHTML;
     }
 
     span.innerHTML += text + " ";
