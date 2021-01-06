@@ -1,6 +1,3 @@
-// TODO Insert random span.tab every 1 to 4 sentences whether by injectText() 
-// prependText() or appendText()
-
 var i = 0,
     j = 0;
 
@@ -21,6 +18,21 @@ function copy(text) {
     input.select();
     document.execCommand('copy');
     document.body.removeChild(input);
+}
+
+// Insert random span.tab every 1 to 4 sentences whether 
+// by injectText() prependText() or appendText()
+var paragraphLength = 0;
+function isNewParagraph() {
+
+    if (paragraphLength >= 3 || Math.random() < 0.25) {
+        paragraphLength = 0;
+        return true;
+    } else {
+        paragraphLength++;
+        return false;
+    }
+
 }
 
 function buildBookmarkURL(index) {
@@ -74,7 +86,7 @@ function injectText(index, text) {
  
     span.id = index;
 
-    span.innerHTML = text;
+    span.innerHTML = `<span class="tab"></span>${text}`;
     content.appendChild(span);
     i = j = index;
 }
@@ -98,7 +110,8 @@ function prependText(index, text) {
 
     span.id = index;
 
-    span.innerHTML += text + " ";
+    // TODO FIXME
+    span.innerHTML += (isNewParagraph()? `</br><span class="tab"></span>${text}` : text) + " ";
     content.insertBefore(span,content.firstChild);
 
     if(index <= 0) {
@@ -126,7 +139,7 @@ function appendText(index, text) {
 
     span.id = index;
 
-    span.innerHTML += " " + text;
+    span.innerHTML += (isNewParagraph()? `</br><span class="tab"></span>${text}` : text) + " ";
     content.appendChild(span);
 }
 
