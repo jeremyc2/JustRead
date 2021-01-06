@@ -124,7 +124,11 @@ function prependText(index, text) {
     var firstChild = content.firstChild;
 
     if(isNewParagraph(true)) {
-        firstChild.innerHTML = "</br><span class='tab'></span>" + firstChild.innerHTML;
+        if(firstChild.innerHTML.startsWith("<span class=\"tab\">")) {
+            firstChild.innerHTML = "</br>" + firstChild.innerHTML;
+        } else {
+            firstChild.innerHTML = "</br><span class=\"tab\"></span>" + firstChild.innerHTML;
+        }
     }
 
     span.innerHTML += text + " ";
