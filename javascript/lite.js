@@ -111,7 +111,7 @@ function prependText(index, text) {
     span.id = index;
 
     // TODO FIXME
-    span.innerHTML += (isNewParagraph(true)? `<span class="tab"></span>${text}</br>` : text) + " ";
+    span.innerHTML += (isNewParagraph(true)? `</br><span class="tab"></span>${text}` : text) + " ";
     content.insertBefore(span,content.firstChild);
 
     if(index <= 0) {
