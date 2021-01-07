@@ -96,7 +96,7 @@ function injectText(index, text) {
  
     span.id = index;
 
-    span.innerHTML = `<span class="tab"></span>${text}`;
+    span.innerHTML = `<span class="tab"></span>${text} `;
     content.appendChild(span);
     i = j = index;
 }
