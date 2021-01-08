@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.addEventListener("click", hideModal)
 
     if(urlParams.has("dark")) {
-        document.body.classList.toggle("dark");
+        document.body.classList.add("dark");
     }
 
     if(urlParams.has("index")) {
