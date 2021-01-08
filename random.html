@@ -9,9 +9,15 @@
 <script src="javascript/help.js"></script>
 <script>
 var i = 0,
-    content;
+    content,
+    isTouchEnabled = "ontouchstart" in document.documentElement;
 
-var isTouchEnabled = "ontouchstart" in document.documentElement;
+const urlParams = new URLSearchParams(window.location.search);
+
+if(urlParams.has("redirect")) {
+    i = Math.floor(Math.random() * 7625);
+    goToJustRead();
+}
 
 function goToJustRead() {
     window.location.href = `read.html?welcome&index=${i}`;
