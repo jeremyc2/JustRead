@@ -1,11 +1,19 @@
 * {
     touch-action: manipulation;
+
+    --darkmode-background: #121212;
+    --darkmode-foreground-01: hsl(0 0% 19% / 1);
+    --darkmode-text: hsl(0 0% 90% / 1);
 }
 
 body {
     margin: 0px;
     overflow-x: hidden;
     background: #f4f5f7;
+}
+
+body.dark {
+    background: var(--darkmode-background);
 }
 
 .tab {
@@ -22,6 +30,12 @@ body {
     border: 1px solid #dadce0;
     padding: 8px;
     border-radius: 10px;
+}
+
+body.dark #content {
+    background-color: var(--darkmode-foreground-01);
+    color: var(--darkmode-text);
+    border-color: var(--darkmode-background);
 }
 
 button {
