@@ -223,6 +223,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modal.addEventListener("click", hideModal)
 
+    if(urlParams.has("dark")) {
+        document.body.classList.toggle("dark");
+    }
+
     if(urlParams.has("index")) {
         i = j = urlParams.get("index");
 
