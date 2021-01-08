@@ -47,8 +47,12 @@ button {
     cursor: pointer;
 }
 
+body.dark button {
+    background-color: var(--darkmode-foreground-01);
+}
+
 button:hover {
-    background-color: #313b5a;
+    background-color: #313b5a !important;
 }
 
 #bookmark {
