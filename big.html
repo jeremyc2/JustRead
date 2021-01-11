@@ -13,6 +13,9 @@
 
     if(state.has("dark")) {
         document.firstChild.classList.toggle("dark");
+        var darkLink = document.getElementById("dark-link");
+        darkLink.onclick = state.remove('dark');
+        darkLink.innerHTML = "Switch to light mode";
     }
 
     var scrollButtonClicked = false;
