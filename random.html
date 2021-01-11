@@ -20,6 +20,10 @@ if(state.has("redirect")) {
     goToJustRead();
 }
 
+if(state.has("dark")) {
+    document.firstChild.classList.toggle("dark");
+}
+
 function goToJustRead() {
     state.add("index", i);
     window.location.href = `read.html?${state.toString()}`;
@@ -68,6 +72,13 @@ if(isTouchEnabled) {
 <style>
 * {
     touch-action: manipulation;
+
+    --darkmode-background: #121212;
+    --darkmode-foreground-01: hsl(0 0% 19% / 1);
+    --darkmode-text: hsl(0 0% 90% / 1);
+}
+:root.dark {
+  background: var(--darkmode-foreground-01);
 }
 body {
     margin: 0px;
@@ -81,6 +92,10 @@ body {
     letter-spacing: -.009em;
     margin-bottom: 70px;
 }
+:root.dark #content {
+    color: var(--darkmode-text);
+}
+
 #load-just-read {
     height: fit-content;
     background-color: #202124;
