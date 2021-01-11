@@ -4,6 +4,7 @@ class State {
     
     constructor(init) {
         this.params = new URLSearchParams(init);
+        this.updateDocumentLinks();
     }
 
     updateDocumentLinks() {
