@@ -11,6 +11,10 @@
 
     var state = new State(window.location.search);
 
+    if(state.has("dark")) {
+        document.firstChild.classList.toggle("dark");
+    }
+
     var scrollButtonClicked = false;
     function randomScroll() {
         scrollButtonClicked = true;

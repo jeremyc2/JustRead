@@ -47,10 +47,6 @@ button {
     cursor: pointer;
 }
 
-body.dark button {
-    background-color: var(--darkmode-foreground-01);
-}
-
 button:hover:not(#help) {
     background-color: #313b5a !important;
 }
