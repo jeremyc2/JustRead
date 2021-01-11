@@ -1,5 +1,6 @@
 function closeMessage(el) {
     el.parentElement.style.display = "none";
+    state.remove("welcome");
 }
 
 document.addEventListener('DOMContentLoaded', () => {
