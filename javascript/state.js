@@ -8,7 +8,14 @@ class State {
 
     updateDocumentLinks() {
         [...document.links].forEach(link => {
-            link.href = link.href.replace(/\?.*/,'?' + this.toString());
+            var queryString = '?' + this.toString();
+
+            if(link.href.lastIndexOf("?") != -1) {
+                link.href = link.href.replace(/\?.*/,queryString);
+            } else {
+                link.href += queryString;
+            }
+
         })
     }
 
