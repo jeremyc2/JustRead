@@ -11,12 +11,14 @@
 
     var state = new State(window.location.search);
 
-    if(state.has("dark")) {
-        document.firstChild.classList.toggle("dark");
-        var darkLink = document.getElementById("dark-link");
-        darkLink.onclick = () => state.remove('dark');
-        darkLink.innerHTML = "Switch to light mode";
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+        if(state.has("dark")) {
+            document.firstChild.classList.toggle("dark");
+            var darkLink = document.getElementById("dark-link");
+            darkLink.onclick = () => state.remove('dark');
+            darkLink.innerHTML = "Switch to light mode";
+        }
+    });
 
     var scrollButtonClicked = false;
     function randomScroll() {

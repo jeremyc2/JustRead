@@ -20,12 +20,14 @@ if(state.has("redirect")) {
     goToJustRead();
 }
 
-if(state.has("dark")) {
-    document.firstChild.classList.toggle("dark");
-    var darkLink = document.getElementById("dark-link");
-    darkLink.onclick = () => state.remove('dark');
-    darkLink.innerHTML = "Switch to light mode";
-}
+document.addEventListener("DOMContentLoaded", () => {
+    if(state.has("dark")) {
+        document.firstChild.classList.toggle("dark");
+        var darkLink = document.getElementById("dark-link");
+        darkLink.onclick = () => state.remove('dark');
+        darkLink.innerHTML = "Switch to light mode";
+    }
+});
 
 function goToJustRead() {
     state.add("index", i);
