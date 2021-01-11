@@ -18,10 +18,13 @@ class State {
         } else {
             this.params.append(key, value);
         }
+
+        this.updateDocumentLinks();
     }
 
     remove(key) {
         this.params.delete(key);
+        this.updateDocumentLinks();
     }
 
     has(key) {
