@@ -12,16 +12,16 @@ var i = 0,
     content,
     isTouchEnabled = "ontouchstart" in document.documentElement;
 
-const urlParams = new URLSearchParams(window.location.search);
+var state = new State(window.location.search);
 
-if(urlParams.has("redirect")) {
+if(state.has("redirect")) {
     i = Math.floor(Math.random() * 7625);
     goToJustRead();
 }
 
 function goToJustRead() {
-    // TODO FIXME
-    window.location.href = `read.html&index=${i}`;
+    state.add("index", i);
+    window.location.href = `read.html?${state.toString()}`;
 }
 
 function injectText(index, text) {
