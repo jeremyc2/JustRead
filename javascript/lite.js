@@ -2,6 +2,7 @@ var i = 0,
     j = 0;
 
 const state = new State(window.location.search);
+state.remove("index");
 
 var content,
     prependContentButton,
