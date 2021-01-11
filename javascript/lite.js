@@ -2,6 +2,7 @@ var i = 0,
     j = 0;
 
 const state = new State(window.location.search);
+var index = state.get("index");
 state.remove("index");
 
 var content,
@@ -228,8 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add("dark");
     }
 
-    if(state.has("index")) {
-        i = j = state.get("index");
+    if(index != null) {
+        i = j = index;
 
         if(i == 0) {
             document.body.removeChild(prependContentButton);
