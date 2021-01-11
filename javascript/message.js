@@ -4,14 +4,14 @@ function closeMessage(el) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    var params;
-    if(typeof urlParams != "undefined") {
-        params = urlParams;
+    var tempState;
+    if(typeof state != "undefined") {
+        tempState = state;
     } else {
-        params = new URLSearchParams(window.location.search);
+        tempState = new State(window.location.search);
     }
 
-    if(params.has("welcome")) {
+    if(tempState.has("welcome")) {
         document.getElementById("welcome").style.display = "block"
     }
 });

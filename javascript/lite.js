@@ -1,7 +1,7 @@
 var i = 0,
     j = 0;
 
-const urlParams = new URLSearchParams(window.location.search);
+const state = new State(window.location.search);
 
 var content,
     prependContentButton,
@@ -223,12 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modal.addEventListener("click", hideModal)
 
-    if(urlParams.has("dark")) {
+    if(state.has("dark")) {
         document.body.classList.add("dark");
     }
 
-    if(urlParams.has("index")) {
-        i = j = urlParams.get("index");
+    if(state.has("index")) {
+        i = j = state.get("index");
 
         if(i == 0) {
             document.body.removeChild(prependContentButton);
