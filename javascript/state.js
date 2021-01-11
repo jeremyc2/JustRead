@@ -4,7 +4,9 @@ class State {
     
     constructor(init) {
         this.params = new URLSearchParams(init);
-        this.updateDocumentLinks();
+
+        var self = this;
+        document.addEventListener('DOMContentLoaded', () => self.updateDocumentLinks());
     }
 
     updateDocumentLinks() {
