@@ -20,7 +20,8 @@ if(urlParams.has("redirect")) {
 }
 
 function goToJustRead() {
-    window.location.href = `read.html?welcome&index=${i}`;
+    // TODO FIXME
+    window.location.href = `read.html&index=${i}`;
 }
 
 function injectText(index, text) {
@@ -99,7 +100,7 @@ body {
 </style>
 <div id="welcome" class="message">
     <span class="close" onclick="closeMessage(this)">&times;</span>
-    Try <a href="read.html?welcome">Just Read!</a> and <a href="big.html?welcome">Just Big!</a>
+    Try <a href="read.html">Just Read!</a> and <a href="big.html">Just Big!</a>
 </div>
 <button id="help" onclick="toggleHelp()">
     <span>?</span><span>Help</span>
