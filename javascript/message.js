@@ -4,14 +4,7 @@ function closeMessage(el) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    var tempState;
-    if(typeof state != "undefined") {
-        tempState = state;
-    } else {
-        tempState = new State(window.location.search);
-    }
-
-    if(tempState.has("welcome")) {
+    if(state.has("welcome")) {
         document.getElementById("welcome").style.display = "block"
     }
 });
