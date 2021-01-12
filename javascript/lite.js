@@ -60,6 +60,7 @@ function bookmarkToClipboard() {
 }
 
 function bookmarkToHistory() {
+    // TODO Add state from url
     window.history.pushState(null, null, `?index=${selected.id}`);
     hideModal();
 }
