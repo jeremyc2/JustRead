@@ -228,7 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if(state.has("dark")) {
         document.body.classList.add("dark");
         var darkLink = document.getElementById("dark-link");
-        darkLink.onclick = () => state.remove('dark');
+        darkLink.onclick = () => {
+            state.remove('dark');
+            state.add('index',i);
+        }
         darkLink.innerHTML = "Switch to light mode";
     }
 
