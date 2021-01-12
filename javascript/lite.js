@@ -48,6 +48,7 @@ function isNewParagraph(isPrepended) {
 }
 
 function buildBookmarkURL(index) {
+    // TODO Add state from url
     return document.location.origin + document.location.pathname + `?index=${index}`
 }
 
