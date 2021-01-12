@@ -48,8 +48,9 @@ function isNewParagraph(isPrepended) {
 }
 
 function buildBookmarkURL(index) {
-    // TODO Add state from url
-    return document.location.origin + document.location.pathname + `?index=${index}`
+    var tempState = new State(state.toString());
+    tempState.add("index", index);
+    return document.location.origin + document.location.pathname + `?${tempState.toString()}`;
 }
 
 function bookmarkToClipboard() {
@@ -60,8 +61,9 @@ function bookmarkToClipboard() {
 }
 
 function bookmarkToHistory() {
-    // TODO Add state from url
-    window.history.pushState(null, null, `?index=${selected.id}`);
+    var tempState = new State(state.toString());
+    tempState.add("index", selected.id);
+    window.history.pushState(null, null, `?${tempState.toString()}`);
     hideModal();
 }
 
