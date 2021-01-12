@@ -230,7 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
         var darkLink = document.getElementById("dark-link");
         darkLink.onclick = () => {
             state.remove('dark');
-            state.add('index',index != null? index: 0);
+            if(index != null)
+                state.add('index',index);
         }
         darkLink.innerHTML = "Switch to light mode";
     }
